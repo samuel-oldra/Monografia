@@ -1,0 +1,47 @@
+%
+% iidefs.sty - pacote com definicoes do II/UFRGS
+% $Id: iidefs.sty,v 4.3 2003/11/21 22:36:13 avila Exp $
+%
+% UFRGS TeX Users Group
+% Institute of Informatics --- UFRGS
+% Porto Alegre, Brazil
+% http://gppd.inf.ufrgs.br/~avila/utug
+% Discussion list: utug-l@inf.ufrgs.br
+%
+% Copyright (C) 2001,2003 UFRGS TeX Users Group
+% This is free software, distributed under the GNU GPL; please take
+% a look in `iiufrgs.cls' to see complete information on using, copying
+% and redistributing these files
+%
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{iidefs}
+\RequirePackage{graphicx}
+
+%
+% definicoes de nomes
+%
+\def\ucs{Universidade de Caxias do Sul}
+\def\dein{Centro de Computa{\c{c}}{\~a}o e Tecnologia da Informa{\c{c}}{\~a}o}
+\def\coursename{Bacharelado em Sistemas de Informa{\c{c}}{\~a}o}
+
+%
+% produz o logotipo do Instituto; o parametro opcional e' um
+% fator de escala
+%
+% ex.:
+%       \iilogo         % tamanho normal (fonte equiv. a 10pt)
+%       \iilogo[2]      % com o dobro do tamanho
+%       \iilogo[.5]     % com metade do tamanho
+%
+\DeclareRobustCommand{\iilogo}[1][1]{
+        \includegraphics[scale=#1]{iilogo.eps}
+}
+
+%
+% produz uma versao alternativa do logotipo do Instituto; possui
+% o mesmo parametro opcional para escala
+%
+\DeclareRobustCommand{\variilogo}[1][1]{
+        \includegraphics[scale=#1]{variilogo.eps}
+}
+
