@@ -1,0 +1,272 @@
+\chapter{Biologia de sistemas}
+
+Após o Projeto Genoma Humano ter completado sua fase inicial, cientistas e políticos começaram a articular cada vez mais, visões de como a tecnologia orientada para a aquisição de conhecimento genômico poderia ser transformada em estratégias de intervenção. A área em que muitas destas ambições e esperanças convergiram é agora o que é chamado de biologia de sistemas. O objetivo global da biologia de sistemas é o objetivo final da biologia moderna, a obtenção de uma fundamental, abrangente e sistemática compreensão da vida. Para atingir esta meta, existe a intenção de integrar sistemas de biólogos para obter uma explicação global para DNA, RNA, proteínas e dados metabólicos, combinando modelagem matemática e uma extensa análise computacional \cite{Malley:a05}.
+
+A biologia de sistema não prevê transformar as compreensões e práticas dos biólogos, mas os seus métodos e conceitos prevêem ter efeitos importantes sobre outras ciências, como física, engenharia, matemática e ciências sociais. Existem fortes argumentos que a biologia de sistemas é mais do que apenas uma extensão do genoma e da bioinformática, ela é qualitativamente diferente do que já foi alcançado e achado pelas ferramentas atuais \cite{Malley:a05}.
+
+Nas seções que seguem será apresentado um cenário exemplo de aplicação em biologia de sistemas, a possibilidade de análise de uma doença através de redes de interação de proteínas e o particionamento dos processos biológicos através da ontologia gênica.
+
+\section{Redes de livre-escala}
+
+Uma rede (grafo) é uma coleção de pontos aonde estes pontos são chamados de nodos ou vértices, e os arcos que conectam estes pontos são chamados de arestas. Redes biológicas, representações de relacionamentos biológicos, são construídas para descrever vários fenômenos biológicos. Estas redes variam desde redes que descrevem condutores bioquímicos da célula até redes de mais alto nível tais como redes de neurônios \cite{Bebek:a07}. 
+
+A conduta de muitos sistemas complexos, das células a Internet, emerge de uma atividade orquestrada de muitos componentes que interagem com outros através de interações aos pares. Em um nível abstrato muito alto, os componentes podem ser reduzidos para uma série de nodos que são conectados por ligações que representam as interações entre dois componentes. Os nodos e ligações juntos formam uma rede, ou, em uma linguagem matemática formal, um grafo \cite{Barabasi:a04}.
+
+Estabelecer a identidade de várias redes celulares não é trivial, dependendo da natureza das interações, as redes podem ser direcionais ou não direcionais. Em redes direcionais, as interações entre dois nodos têm uma direção bem definida, por exemplo, a direção do fluxo de material de um substrato para um produto em uma reação metabólica. Em redes não-direcionais, as ligações não têm uma direção assinalada, por exemplo, em uma rede de interação de proteínas, uma ligação representa uma relação mútua de amarração bilateral, se a proteína A amarra-se a proteína B, então a proteína B também se amarra a proteína A \cite{Barabasi:a04}.
+
+A origem da topologia de livre-escala em redes complexas pode ser reduzida a dois mecanismos básicos: crescimento e ligação principal. Crescimento significa que a rede emerge através da ligação de nodos subseqüentes, tais como, um novo nodo que é adicionado na rede. Ligação principal significa que novos nodos preferem se ligar aos nodos mais conectados \cite{Barabasi:a04}.
+
+Uma das principais características, denominada conexão preferencial ou ligação principal, é a tendência de um novo vértice se conectar a um vértice da rede que tem um grau elevado de conexões. Essa característica implica em redes com poucos vértices altamente conectados, denominados \emph{hubs}, e muito vértices com poucas conexões, como mostra a Figura \ref{fgr:RedeLivreEscala} \cite{Barabasi:a04}.
+
+\begin{figure}[htp]
+	\centering
+	\includegraphics[scale=.7]{imgs/PLEKHG5}
+	\caption{Rede de livre-escala}
+	Fonte: \cite{Barabasi:a04}
+	\label{fgr:RedeLivreEscala}
+\end{figure}
+
+A relação entre a topologia de uma rede biológica e suas propriedades funcionais e evolucionárias sugerem a maioria das redes biológicas, são redes de livre-escala: redes de sinalização, redes celulares, redes metabólicas e redes de interação de proteínas \cite{Siegal:a07}.
+
+\subsection{Redes de sinalização}
+
+Redes de sinalização (\emph{signaling networks}) são complexas em termos de eventos químicos e biofísicos e um grande número de interações. A descrição quantitativa nos modelos facilita o mapeamento entre diferentes tipos de métodos de análise para sistemas complexos. Métodos de analise de sistemas podem ressaltar estados estáveis da rede de sinalização e descrever as transições entre eles. Modelos também revelam funcionalidades similares entre propriedades das redes de sinalização e outros sistemas bem-compreendidos, tais como, dispositivos eletrônicos e redes neurais \cite{Bhalla:a03}.
+
+\pagebreak
+
+É possível considerar redes de sinalização como sistemas que decodificam entradas complexas em tempo, espaço e química em padrões combinatórios de saída de atividades de sinalização. A combinação de métodos de modelos de computação para capturar a complexidade e detalhes, e abstrações úteis reveladas por estes modelos, é necessário para alcançar uma descrição rigorosa tão boa quanto à compreensão humana \cite{Bhalla:a03}.
+
+\subsection{Redes celulares}
+
+As redes celulares (\emph{cellular networks}) são redes de livre-escala. A primeira evidência desta afirmação surgiu da análise do metabolismo, no qual os nodos são o resultado da atividade metabólica e as ligações representam reações bioquímicas de catalise enzimática. Assim como as reações são irreversíveis, redes metabólicas são direcionadas \cite{Barabasi:a04}.
+
+\subsection{Redes metabólicas}
+
+Uma rede metabólica (\emph{metabolic networks}) é uma rede de caminhos aonde substratos e produtos metabólicos são conectados com arestas dirigidas. Estes arcos indicam atos de reações metabólicas sobre um determinado substrato e produz um determinado produto. Estudar redes metabólicas permite compreender os mecanismos moleculares de um organismo específico, como por exemplo, glicólise, ciclo de Krebs, etc \cite{Bebek:a07}.
+
+\subsection{Redes de interação de proteínas}
+
+A topologia de livre-escala é também, aparentemente, uma característica das redes de interação de proteínas (\emph{protein-protein interaction network}), embora as limitações nos dados sejam substanciais. Redes de interação de proteínas são determinadas, primeiramente, pela análise de duas leveduras híbridas, as quais não provam interações nativas \cite{Siegal:a07}.
+
+As ontologias servem para classificar as redes conforme suas funções biológicas, que podem ser componente celular, processo biológico e função molecular.
+
+\section{Ontologia gênica}
+
+O projeto Ontologia Gênica\footnote{The Gene Ontology Project. Disponível em: $<$\url{http://www.geneontology.org}$>$. Acesso em: 24 de abril de 2009} (\emph{Gene Ontology} ou GO) é uma das principais iniciativas na bioinformática e também um esforço de colaboração para dar resposta à necessidade de coerência na descrição dos produtos de gene em diferentes bases de dados. O projeto também é parte de um esforço maior para classificação, o \emph{Open Biomedical Ontologies} (OBO) \cite{Ferro:m08}.
+
+Existem três aspectos distintos para este esforço: em primeiro lugar, escrever e manter as ontologias (vocabulário controlado de gene e propriedades produto de gene) em si, em segundo lugar, fazer ligações cruzadas entre as ontologias e os genes e produtos de gene buscando difundir e assimilar as anotações de dados; e em terceiro lugar, desenvolver ferramentas que facilitam a criação, manutenção e uso de ontologias. Atualmente o projeto GO está organizado em três princípios: componente celular, que é um componente de uma célula, mas com a ressalva de que é parte de um objeto maior que pode ser uma estrutura anatômica; processo biológico, que é uma série de eventos que é realizada por um ou mais conjuntos de funções moleculares ordenadas; e função molecular, que descreve atividades, tais como catalisadores, por exemplo, que ocorrem ao nível molecular. Esses três princípios ou áreas são considerados independentes umas das outras \cite{Ferro:m08}.
+
+O projeto GO foi originalmente constituído em 1998 por um consórcio de investigadores dedicados a estudar o genoma de três organismos modelo: \emph{Drosophila melanogaster} (mosca das frutas), \emph{Mus musculus} (rato), e \emph{Saccharomyces cerevisiae} (levedura). Muitas outras bases de organismo modelo aderiram ao projeto formando o consórcio GO (\emph{GO Consortium}), que é o conjunto de grupos envolvidos ativamente no projeto GO, contribuindo não só com anotação de dados, mas também para o desenvolvimento de ontologias e ferramentas para visualizar e aplicar os dados.
+
+\pagebreak
+
+Em janeiro de 2008, o projeto GO já continha mais de 24.500 termos aplicáveis a uma ampla variedade de organismos biológicos. Atualmente existe um conjunto significativo de literatura sobre o desenvolvimento e a utilização do projeto GO e o mesmo já se tornou uma ferramenta padrão no arsenal da bioinformática.
+
+\section{Fluxo de pesquisa de uma doença}
+
+O fluxo de pesquisa para geração das redes de interação da proteína pode seguir dois fluxos, para tanto os mesmos serão descritos separadamente nas seções seguintes usando como base a Figura \ref{fgr:FluxoPesquisa}.
+
+\begin{figure}[htp]
+	\centering
+	\includegraphics[scale=.65]{imgs/FluxoPesquisa2}
+	\caption{Fluxo de pesquisa}
+	\label{fgr:FluxoPesquisa}
+\end{figure}
+
+\subsection{Descrição do Fluxo A}
+\label{sbsct:DescricaoFluxoA}
+
+O Fluxo A de pesquisa ocorre da seguinte forma. Primeiramente acesse o \emph{site} do OMIM, em \url{http://www.ncbi.nlm.nih.gov/omim}, digite na caixa de texto ao lado do \emph{label} ``for'' a doença que procura, como mostra a Figura \ref{fgr:Etapa01}, e depois clique no botão ``Go'' (Atividade 1).
+
+\begin{figure}[htp]
+	\centering
+	\framebox{\includegraphics[width=.9\textwidth]{imgs/Etapa01}}
+	\caption{Pesquisa da doença}
+	\label{fgr:Etapa01}
+\end{figure}
+
+Então o \emph{site} lhe apresentará uma lista com as ocorrências da doença para que você selecione a que você está procurando, como mostra a Figura \ref{fgr:Etapa02}.
+
+\begin{figure}[htp]
+	\centering
+	\framebox{\includegraphics[width=.9\textwidth]{imgs/Etapa02}}
+	\caption{Lista de ocorrências da doença}
+	\label{fgr:Etapa02}
+\end{figure}
+
+Após escolhida a ocorrência da doença, o \emph{site} lhe apresentará um relatório com a descrição completa da mesma, como mostra a Figura \ref{fgr:Etapa03} (Atividade 2).
+
+\begin{figure}[htp]
+	\centering
+	\framebox{\includegraphics[width=.9\textwidth]{imgs/Etapa03}}
+	\caption{Relatório da doença}
+	\label{fgr:Etapa03}
+\end{figure}
+
+Então localize e selecione uma ou mais proteínas/genes (no exemplo, sublinhadas em vermelho) no relatório, como mostra a Figura \ref{fgr:Etapa04} (Atividade 3.1).
+
+\begin{figure}[htp]
+	\centering
+	\framebox{\includegraphics[width=.9\textwidth]{imgs/Etapa04}}
+	\caption{Localizando proteínas/genes no relatório}
+	\label{fgr:Etapa04}
+\end{figure}
+
+Após selecionada a proteína, acesse o \emph{site} do STRING, em \url{http://string.embl.de}, e digite-a na caixa de texto localizada abaixo do \emph{label} ``protein name:'' na aba ``search by name'', como mostra a Figura \ref{fgr:Etapa05-1} e clique no botão ``GO !''.
+
+\begin{figure}[htp]
+	\centering
+	\includegraphics[scale=.9]{imgs/Etapa05-1}
+	\caption{Pesquisa da proteína}
+	\label{fgr:Etapa05-1}
+\end{figure}
+
+O \emph{site} lhe apresentará uma lista de organismos, como mostra a Figura \ref{fgr:Etapa06-1}, selecione o que deseja utilizar e clique no botão ``Continue $\rightarrow$'' para prosseguir para a próxima etapa (Atividade 4.1).
+
+\begin{figure}[htp]
+	\centering
+	\framebox{\includegraphics[width=.9\textwidth]{imgs/Etapa06-1}}
+	\caption{Lista de organismos que possuem a proteína}
+	\label{fgr:Etapa06-1}
+\end{figure}
+
+Então lhe será apresentada a rede de interação da proteína, como mostra a Figura \ref{fgr:Etapa07-1}, clique no botão ``save'' para prosseguir (Atividade 5.1).
+
+\begin{figure}[htp]
+	\centering
+	\framebox{\includegraphics[width=.9\textwidth]{imgs/Etapa07-1}}
+	\caption{Apresentação da rede de interação da proteína}
+	\label{fgr:Etapa07-1}
+\end{figure}
+
+Após isso o \emph{site} lhe apresentará uma última tela solicitando que você escolha o tipo de arquivo que deseja salvar, como mostra a Figura \ref{fgr:Etapa08-1}, selecione o arquivo do tipo XML (no exemplo, circulado em vermelho).
+
+\begin{figure}[htp]
+	\centering
+	\framebox{\includegraphics[width=.9\textwidth]{imgs/Etapa08-1}}
+	\caption{Seleção do tipo de arquivo da rede de interação}
+	\label{fgr:Etapa08-1}
+\end{figure}
+
+\pagebreak
+
+Uma vez que o arquivo esteja salvo em sua máquina local, abra o software ``Cytoscape'', disponível em \url{http://www.cytoscape.org}, e abra o menu ``File $\rightarrow$ Import $\rightarrow$ Network (multiple file types)\dots'' (Atividade 6.1).
+
+Selecione o arquivo que deseja importar clicando no botão ``Select'' e o localizando, então clique no botão ``Import'' para importar o arquivo, como mostra a Figura \ref{fgr:Etapa09-1}. Repita esse processo com quantas proteínas você desejar.
+
+\begin{figure}[htp]
+	\centering
+	\includegraphics[width=.9\textwidth]{imgs/Etapa09-1}
+	\caption{Importando rede de interação da(s) proteína(s)}
+	\label{fgr:Etapa09-1}
+\end{figure}
+
+Uma vez que todos os arquivos que deseja utilizar tenham sido importados, você poderá realizar um ``merge'' das redes de interações. Abra o menu ``Plugins $\rightarrow$ Merge networks'', selecione as redes que deseja realizar o ``merge'', como mostra a Figura \ref{fgr:Etapa10-1}, e clique em ``OK'' (Atividade 7.1).
+
+\begin{figure}[htp]
+	\centering
+	\includegraphics[width=.9\textwidth]{imgs/Etapa10-1}
+	\caption{Merge das redes de interações das proteínas}
+	\label{fgr:Etapa10-1}
+\end{figure}
+
+Após isso você terá a representação gráfica do ``merge'' das redes de interações, como mostra a Figura \ref{fgr:Etapa11-1} (Atividade 8.1).
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[scale=.6]{imgs/Etapa11-1}
+	\caption{Representação gráfica das redes de interações}
+	\label{fgr:Etapa11-1}
+\end{figure}
+
+Uma vez que o especialista tenha essa rede de interações, ele pode fazer a análise dos agrupamentos dessa rede através do \emph{plug-in} disponível para o software Cytoscape chamado ``MCODE''. O MCODE\footnote{MCODE. Disponível em: $<$\url{http://chianti.ucsd.edu/cyto_web/plugins/index.php}$>$. Acesso em: 17 de junho de 2009} é responsável por encontrar \emph{clusters} (regiões altamente conectadas) em uma rede, pois aglomerados significam coisas diferentes em tipos de redes diferentes (Atividade 9).
+
+Então o especialista pode fazer a partição das redes de interação de proteínas usando a ontologia gênica através de outro \emph{plug-in} disponível para o software Cytoscape chamado ``BiNGO''. O BiNGO\footnote{BiNGO. Disponível em: $<$\url{http://www.psb.ugent.be/cbd/papers/BiNGO}$>$. Acesso em: 17 de junho de 2009} é responsável por determinar quais as categorias de ontologia gênica estão estatisticamente sendo representadas em um conjunto de genes ou o sub gráfico biológico de uma rede (Atividade 10).
+
+\subsection{Descrição do Fluxo B}
+
+O Fluxo B de pesquisa ocorre da seguinte forma. Primeiramente acesse o \emph{site} do OMIM, em \url{http://www.ncbi.nlm.nih.gov/omim}, e digite na caixa de texto ao lado do \emph{label} ``for'' a doença que procura, como mostra a Figura \ref{fgr:Etapa01} apresentada na Subseção \ref{sbsct:DescricaoFluxoA}, e depois clique no botão ``Go'' (Atividade 1).
+
+Então o \emph{site} lhe apresentará uma lista com as ocorrências da doença para que você selecione a que você está procurando, como mostra a Figura \ref{fgr:Etapa02} apresentada na Subseção \ref{sbsct:DescricaoFluxoA}.
+
+Após escolhida a ocorrência da doença, o \emph{site} lhe apresentará um relatório com a descrição completa da mesma, como mostra a Figura \ref{fgr:Etapa03} apresentada na Subseção \ref{sbsct:DescricaoFluxoA} (Atividade 2).
+
+Então localize e selecione uma ou mais proteínas/genes (no exemplo, sublinhadas em vermelho) no relatório, como mostra a Figura \ref{fgr:Etapa04} apresentada na Subseção \ref{sbsct:DescricaoFluxoA} (Atividade 3).
+
+Acesse o \emph{site} do STRING, em \url{http://string.embl.de}, e digite na caixa de texto localizada abaixo do \emph{label} ``list of names:'' na aba ``multiple names'', cada uma das proteínas selecionadas que deseja utilizar, como mostra a Figura \ref{fgr:Etapa05-2} e clique no botão ``GO !''.
+
+\begin{figure}[htp]
+	\centering
+	\includegraphics[scale=.9]{imgs/Etapa05-2}
+	\caption{Pesquisa das proteínas}
+	\label{fgr:Etapa05-2}
+\end{figure}
+
+O \emph{site} lhe apresentará uma lista de organismos, como mostra a Figura \ref{fgr:Etapa06-2}, selecione o que deseja utilizar e clique no botão ``Continue $\rightarrow$'' para prosseguir para a próxima etapa (Atividade 4.2).
+
+\begin{figure}[htp]
+	\centering
+	\framebox{\includegraphics[width=.9\textwidth]{imgs/Etapa06-2}}
+	\caption{Lista de organismos que possuem as proteínas}
+	\label{fgr:Etapa06-2}
+\end{figure}
+
+\pagebreak
+
+Então o \emph{site} lhe apresentará uma nova lista pendido que você selecione dentre as ocorrências das proteínas quais serão utilizadas, como mostra a Figura \ref{fgr:Etapa07-2}, selecione-as e clique no botão ``Continue $\rightarrow$'' novamente. Pode-se ressaltar que combinações diferentes geram redes diferentes (Atividade 5.2).
+
+\begin{figure}[htp]
+	\centering
+	\framebox{\includegraphics[width=.9\textwidth]{imgs/Etapa07-2}}
+	\caption{Lista de ocorrências das proteínas}
+	\label{fgr:Etapa07-2}
+\end{figure}
+
+Então lhe será apresentada a rede de interação das proteínas, como mostra a Figura \ref{fgr:Etapa08-2}, clique no botão ``save'' para prosseguir (Atividade 6.2).
+
+\begin{figure}[htp]
+	\centering
+	\framebox{\includegraphics[width=.9\textwidth]{imgs/Etapa08-2}}
+	\caption{Apresentação da rede de interação das proteínas}
+	\label{fgr:Etapa08-2}
+\end{figure}
+
+Após isso o \emph{site} lhe apresentará uma última tela solicitando que você escolha o tipo de arquivo que deseja salvar, como mostra a Figura \ref{fgr:Etapa09-2}, selecione o arquivo do tipo XML (no exemplo, circulado em vermelho).
+
+\begin{figure}[htp]
+	\centering
+	\framebox{\includegraphics[width=.9\textwidth]{imgs/Etapa09-2}}
+	\caption{Seleção do tipo de arquivo das redes de interações}
+	\label{fgr:Etapa09-2}
+\end{figure}
+
+Uma vez que o arquivo esteja salvo em sua máquina local, abra o software ``Cytoscape'', disponível em \url{http://www.cytoscape.org}, e abra o menu ``File $\rightarrow$ Import $\rightarrow$ Network (multiple file types)\dots'' (Atividade 7.2).
+
+Selecione o arquivo que deseja importar clicando no botão ``Select'' e o localizando, então clique no botão ``Import'' para importar o arquivo, como mostra a Figura \ref{fgr:Etapa09-1} apresentada na Subseção \ref{sbsct:DescricaoFluxoA}.
+
+Após isso você terá a representação gráfica da rede de interação, como mostra a Figura \ref{fgr:Etapa10-2} (Atividade 8.2).
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[scale=.4]{imgs/Etapa10-2}
+	\caption{Representação gráfica das redes de interações}
+	\label{fgr:Etapa10-2}
+\end{figure}
+
+Uma vez que o especialista tenha essa rede de interações, ele pode fazer a análise dos agrupamentos dessa rede através do \emph{plug-in} disponível para o software Cytoscape chamado ``MCODE'' (Atividade 9).
+
+Então o especialista pode fazer a partição das redes de interação de proteínas usando a ontologia gênica através de outro \emph{plug-in} disponível para o software Cytoscape chamado ``BiNGO'' (Atividade 10).
+
+\section{Considerações finais}
+
+Nesse capítulo foi apresentado o fluxo de pesquisa de uma doença gênica que será trabalhado nos próximos capítulos, explicando os conceitos necessários ao seu entendimento.
+
+Para levantamento dos requisitos do sistema foi necessária uma reunião presencial com o especialista, nessa reunião foi explicado o fluxo de pesquisa de uma doença gênica, bem como os \emph{sites} utilizados. Também foi levantada a forma que o fluxo era documentado para, posteriormente, repetir o experimento e descobriu-se que é feito de forma manual.
+
+Então foram acessados os \emph{sites} do OMIM e do STRING, pelo especialista, e foi mostrado passo-a-passo como eram feitas as buscas por doenças gênicas, por genes/proteínas no relatório da doença e, posteriormente, pelas redes de interação de proteínas. Outras dúvidas que surgiram durante a documentação do fluxo foram esclarecidas por \emph{e-mail} com o especialista.
+
+\pagebreak
+
+Feito isso, o fluxo de pesquisa de uma doença gênica foi documentado com a criação de um \emph{workflow}, o qual demonstra os passos realizados pelo especialista. Esse \emph{workflow} teve todos os seus passos descritos e explicados com o auxílio de imagens retiradas dos \emph{sites}.
+
+No próximo capítulo será apresentada a proposta de software para facilitar e tornar mais confiável esse fluxo de pesquisa.
