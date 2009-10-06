@@ -1,0 +1,166 @@
+\chapter{Proposta de software}
+\label{cap:PropostaSoftware}
+
+Neste capítulo serão apresentadas algumas ferramentas para o desenvolvimento de \emph{workflows} científicos, as regras de nomenclatura genética e a modelagem do software a ser desenvolvido para utilizar a biologia de sistemas, para análise de uma rede de interação de proteínas a partir da pesquisa sobre doenças genéticas.
+
+\section{Workflow}
+
+Um \emph{workflow} é uma seqüência de atividades ao longo de um processo de negócio, completo ou apenas parte dele, onde documentos, informações ou tarefas são transmitidas de um participante a outro por ações, de acordo com regras procedimentais \cite{Mattos:m08, Sommerville:l07}.
+
+\emph{Workflows} científicos são definidos como recursos para resolução de problemas científicos através de técnicas tradicionais de \emph{workflows}, ou seja, as idéias de execução de um conjunto de tarefas em uma determinada seqüência foram aproveitadas na área científica para a realização de experimentos e estudos. \emph{Workflows} científicos diferem de \emph{workflows} de negócio em diversos aspectos, particularmente em bioinformática, são caracterizados pelo alto grau de intervenção humana durante a sua execução \cite{Digiampietri:m07, Silva:m06}. Nas subseções que seguem, serão apresentadas algumas ferramentas para o desenvolvimento de \emph{workflows} científicos.
+
+\subsection{VisTrails}
+
+O VisTrails\footnote{VisTrails. Disponível em: $<$\url{http://www.vistrails.org}$>$. Acesso em: 10 de junho de 2009} foi concebido para gerenciar a rápida evolução dos \emph{workflows}. VisTrails simplifica a criação, execução e compartilhamento de visualizações complexas, minerações de dados ou outos dados de análise em larga escala. Ao gerir automaticamente os dados, metadados, e os dados de exploração de processos, VisTrails permite que os usuários se concentrem em tarefas complexas e desafiadoras e os libera de tarefas tediosas que comsomem muito tempo, como as relacionadas a organização e manipulação de grandes volumes de dados.
+
+VisTrails fornece uma infra-estrutura que pode ser combinada com a de sistemas de visualização e de \emph{workflow} existentes. Embora o VisTrails tenha sido originalmente construído para atender as necessidades de aplicações científicas exploratórias, a infra-estrutura que oferece é muito geral. Isto tornou claro que o sistema foi desenvolvido para pessoas de diferentes domínios, tanto para indústrias como para universidades. VisTrails tem potencial para reduzir o tempo de introspecção em praticamente qualquer tarefa exploratória.
+
+\subsection{Kepler}
+
+Kepler\footnote{Kepler. Disponível em: $<$\url{https://kepler-project.org}$>$. Acesso em: 10 de junho de 2009} foi concebido para ajudar os cientistas, os analistas e os programadores a criar, executar e compartilhar modelos e análises sobre uma vasta gama de disciplinas científicas e de engenharia. Kepler pode operar sobre os dados armazenados em uma variedade de formatos, locais e através da Internet, e é um meio eficaz para a integração de díspares componentes de software, ou facilitar a distribuição e execução de modelos remotos. Usando a interface gráfica do usuário, basta selecionar os usuários e em seguida, conectar componentes analíticos pertinentes e fontes de dados para criar um ``trabalho científico'' (representação de passos necessários para gerar resultados). O software Kepler ajuda os usuários a compartilhar e reutilizar dados, fluxos de trabalho e componentes desenvolvidos pela comunidade científica para resolver necessidades comuns.
+
+O software Kepler é desenvolvido e mantido pelo \emph{the cross-project Kepler collaboration}, que é liderado por uma equipe constituída por vários das principais instituições que originaram o projeto: UC Davis, UC Santa Barbara e UC San Diego. Primeiramente responsável pela concretização dos objetivos do Projeto Kepler a longo prazo, essa equipe trabalha para garantir a viabilidade técnica e financeira do Kepler, tomando as decisões estratégicas em nome da comunidade de usuários do Kepler, bem como proporcionar um ponto de contato oficial e duradouro para representar os interesses do Projeto Kepler.
+
+Kepler é uma aplicação baseada em Java e é matido os sistemas operaconais Windows, OSX e Linux. O Projeto Kepler apóia o desenvolvimento do Kepler como código aberto, bem como fornece materiais e mecanismos para aprendizagem de como usar o Kepler, o compartilhamento de experiências com outros desenvolvedores de \emph{workflow}, relatando \emph{bugs}, sugerindo melhorias, etc.
+
+\subsection{Taverna}
+
+O Taverna Workbench\footnote{Taverna Workbench. Disponível em: $<$\url{http://taverna.sourceforge.net}$>$. Acesso em: 10 de junho de 2009} é uma ferramenta de software livre para projetar e executar os fluxos de trabalho, criada pelo Projeto myGrid e financiada pelo OMII-UK.
+
+Taverna permite que os usuários integrem diversas ferramentas, incluindo os \emph{web services} de diferentes domínios, como a química, a música e as ciências sociais. Para bionformática fornece acesso aos \emph{services} prestados pela \emph{National Center for Biotechnology Information, The European Bioinformatics Institute, the DNA Databank of Japan (DDBJ), SoapLab, BioMOBY} e \emph{EMBOSS}.
+
+O Taverna Workbench fornece um ambiente desktop para criação de \emph{workflow} científicos. O \emph{myExperiment social site} suporta procura e partilha de fluxos de trabalho e tem um suporte especial para Taverna \emph{workflow}. O Taverna workbench, myExperiment e respectivos componentes são desenvolvidos e mantidos pela equipe do myGrid em colaboração com a comunidade de fonte aberta.
+
+O Taverna roda em qualquer versão Windows, Linux, OSX e outros sistemas UNIX recentes. Se o seu computador tem uma conexão de rede e consegue executar o Java 5, você não precisa de mais nada, pois não existem bases de dados e nem análise de instalar aplicações, já que todos estes são acessados através da rede.
+
+\subsection{Egene}
+
+O Egene\footnote{Egene. Disponível em: $<$\url{http://www.coccidia.icb.usp.br/egene}$>$. Acesso em: 10 de junho de 2009} é um sistema genérico, flexível e modular para construção de \emph{workflow} de trabalho, permite que programas de terceiros sejam utilizados e integrados segundo as necessidades de diferentes projetos e sem qualquer programação ou experiência a ser exigida.
+
+O Egene vem com Coed, uma ferramenta visual que facilita a construção e documentação. Egene é um software de código aberto e foi desenvolvido para rodar em sistemas operacionais Unix/Linux. O sistema Egene foi escrito em Perl.
+
+\section{Nomenclatura genética}
+
+As regras de nomenclatura genética aprovadas pelo \emph{HUGO Gene Nomenclature Committee} (HGNC) informam que, os nomes dos genes devem ser breves, específicos e devem tentar trazer informações sobre sua função e relação com os outros genes da mesma família \cite{Wain:09, Wain:a04, Wain:a02}.
+
+Também informam que, a primeira letra do nome do gene deve ser a mesma do símbolo do gene, para facilitar a localização, os nomes dos genes devem ser descritos na ortografia americana, a especificidade dos tecidos e o peso molecular devem ser evitados, podendo estes ser usados de forma ilimitada na descrição, e os nomes não devem usar termos para definir relações familiares com outros genes \cite{Splendore:a05, Wain:09, Wain:a04, Wain:a02-2}. Segundo \cite{HGNC:09, Wain:09, Wain:a04, Wain:a02}, os nomes de genes devem seguir as seguintes regras:
+
+\begin{itemize}
+	\item Começam com letra minúscula, a não ser que seja o nome de uma pessoa que descreva a doença;
+	\item Modificadores descritivos devem seguir a parte principal do nome, separados por vírgulas;
+	\item Caso exista um nome alternativo esse deve ser colocado entre parênteses; e
+	\item Caso exista um nome de outras espécies esse deve ser colocado entre parentes e no final do nome.
+\end{itemize}
+
+Os genes, além do nome oficial, também possuem um símbolo usado para designá-los em bancos de dados e publicações. Os símbolos dos genes são caracterizados por letras maiúsculas ou uma combinação de letras maiúsculas e algarismos arábicos, com exceção dos símbolos C\#orf\# \cite{Wain:09, Wain:a04, Wain:a02}. Segundo \cite{Eyre:a06, Fundel:a06}, os símbolos de genes devem seguir as seguintes regras:
+
+\begin{itemize}
+	\item Devem ser curtos, preferencialmente com menos de seis caracteres de comprimento;
+	\item Devem iniciar com uma letra maiúscula e podem ser seguidos de outras letras maiúsculas ou algarismos arábicos;
+	\item Não podem conter sobre ou subscritos, algarismos romanos, letras gregas, pontuação (com exceção do gene HLA), ``G'' para a identificação de gene, ou qualquer outra referência a espécie, por exemplo, ``H / h'' para humanos;
+	\item Devem ser evitadas referências a especificidade dos tecidos, peso molecular e localização cromossômica; e
+	\item Também devem ser evitadas algumas letras ou combinação de letras que são usadas como prefixo ou sufixo em um símbolo para dar um significado específico, devendo essas não ser utilizadas para outros fins.
+\end{itemize}
+
+Embora existam inúmeras exceções, os genes e as proteínas derivadas carregam o mesmo nome/símbolo sendo essa inclusive uma recomendação do HGNC. Quando o mesmo símbolo é usado para designar o gene e a proteína, a maneira de diferenciá-los é pelo uso de itálico (por exemplo, gene \emph{GATA1}, proteína GATA-1) \cite{Splendore:a05, Fundel:a06}. Na Tabela \ref{tbl:RegrasGrafia} é apresentado um resumo das regras de grafia para os símbolos dos genes humanos em trabalhos científicos.
+
+\pagebreak
+
+\begin{table}[htp]
+	\centering
+	\includegraphics[scale=.9]{imgs/RegrasGrafia}
+	\caption{Regras de Grafia}
+	Fonte: \cite{Splendore:a05}
+	\label{tbl:RegrasGrafia}
+\end{table}
+
+O benefício do uso de nomes e símbolos consistentes para os genes deve fazer com que um número de revistas cada vez maior passe a exigir nas suas publicações o cumprimento dessas regras, a exemplo do que já fazem as principais revistas da área biomédica, como a \emph{Nature, Nature Genetics, American Journal of Human Genetics, Genomics, Human Mulation, Genes Chromosomes Cancer} e \emph{The Lancet}. Para saber qual símbolo aprovado de um determinado gene, deve-se consultar a página do HGNC/Genew, ou então, procurá-lo no OMIM (\emph{Online Mendelian Inheritance in Man}) \cite{Splendore:a05, Fundel:a06}.
+
+\section{Modelagem do software}
+
+Nessa seção serão apresentados os diagramas desenvolvidos com o objetivo de modelar o sistema \emph{web} e melhorar o entendimento quanto ao funcionamento do mesmo.
+
+\subsection{Modelo de negócio - caso de uso}
+
+O sistema tem o objetivo de facilitar o processo de análise das redes de interação protéica e possibilitar armazenar informações quanto à pesquisa durante o processo para posteriormente poderem ser usadas caso seja necessário reproduzir os passos da pesquisa, para isso o diagrama de caso de uso da Figura \ref{fgr:CasoDeUso01} visa demonstrar a interação dos usuários ``Bioinformática'' e ``Biólogo'' com o ``Sistema Web'' e do ``Sistema Web'' com as outras aplicações.
+
+No caso de uso, os usuário interagem apenas com o ``Sistema Web'' e com o software de visualização e análise da rede de interação de proteínas, ficando os acessos a outras aplicações, responsáveis pela pesquisa da doença e da proteína, transparentes para o usuário.
+
+\begin{figure}[htp]
+	\centering
+	\includegraphics[scale=.55]{imgs/CasoDeUso01}
+	\caption{Caso de Uso}
+	\label{fgr:CasoDeUso01}
+\end{figure}
+
+\subsection{Workflow científico para análise de redes de interação protéica}
+\label{ssec:WorkflowCientifico}
+
+O fluxo de pesquisa do software para geração da rede de interação da proteína foi otimizado para prever intervenção humana e será explicado a seguir, usando como base a Figura \ref{fgr:FluxoPesquisaSoftware}.
+
+\begin{figure}[htp]
+	\centering
+	\includegraphics[scale=.75]{imgs/FluxoPesquisaSoftware2}
+	\caption{Fluxo de pesquisa do software}
+	\label{fgr:FluxoPesquisaSoftware}
+\end{figure}
+
+\pagebreak
+
+O fluxo se inicia com o usuário digitando o nome da doença que deseja encontrar (Atividade 1), o acesso ao site do OMIM é feito através da busca passando parâmetros pela url de chamada do site, por exemplo, \[ http://www.ncbi.nlm.nih.gov/sites/entrez?db=omim\&term=diabetes \] onde o parâmetro ``db'' indica o banco de dados que está sendo utilizado e ``term'' a doença que está sendo procurada. Então o sistema apresenta as ocorrências encontradas para a doença e o usuário escolhe a que está procurando (Atividade 2). Após isso o sistema apresenta o relatório da doença e uma lista de sugestões de proteínas encontradas (Atividade 3). O sistema busca por essas proteínas no site do STRING passando parâmetros pela url de chamada do site, por exemplo, \[ http://string.embl.de/newstring\_cgi/show\_network\_section.pl?identifier=dr3 \] onde o parâmetro ``identifier'' indica a proteína que está sendo procurada. Então o sistema solicita que o usuário selecione o organismo que deseja utilizar (Atividade 4). Para o caso em que o site do STRING informar que foram encontradas mais de uma ocorrência para o nome de uma proteína, o sistema solicitará que o usuário escolha dentre as ocorrências quais serão utilizadas (Atividade 5). Após isso o sistema apresentará a rede de interação da(s) proteína(s) e retornará um arquivo XML (Atividade 6). Então esse arquivo XML será importado no software Cytoscape (Atividade 7) e será apresentada a representação gráfica da rede de interação da(s) proteína(s) (Atividade 8).
+
+Uma vez que o especialista tenha essa rede de interações, ele pode fazer a análise dos agrupamentos dessa rede através do \emph{plug-in} disponível para o software Cytoscape chamado ``MCODE'' (Atividade 9). Então o especialista pode fazer a partição das redes de interação de proteínas usando a ontologia gênica através de outro \emph{plug-in} disponível para o software Cytoscape chamado ``BiNGO'' (Atividade 10).
+
+\subsection{Diagrama de arquitetura da aplicação}
+\label{ssec:ArquiteturaAplicacao}
+
+A arquitetura do sistema é enxuta, nela é necessária uma máquina servidora que tenha instalado um servidor \emph{web} com a linguagem PHP e o SGBD (Sistema Gerenciador de Banco de Dados) MySQL.
+
+Como pode ser acompanhado na Figura \ref{fgr:ArquiteturaAplicacao}, o servidor recebe as requisições de serviços e retorna a página que estará disponível em um diretório virtual do servidor \emph{web}. Essa página permitirá ao usuário interagir com as informações armazenadas no servidor, na base de dados MySQL e também com os outros serviços disponibilizados pelas página do OMIM e do STRING.
+
+\begin{figure}[htp]
+	\centering
+	\includegraphics[scale=0.89]{imgs/ArquiteturaAplicacao}
+	\caption{Diagrama de arquitetura da aplicação}
+	\label{fgr:ArquiteturaAplicacao}
+\end{figure}
+
+\section{Detalhamento da implementação}
+
+Nessa seção serão listadas e quando necessário detalhadas as funcionalidades que o sistema irá oferecer aos usuários, para tornar o processo ágil e seguro.
+
+\subsection{Algoritmo de extração dos dados}
+\label{ssec:AlgoritmoExtracaoDados}
+
+Expressões regulares podem ser definidas, ``como um método formal de especificar um padrão de texto'' \cite{Jargas:l08}. Porém se formos defini-las de uma forma mais detalhada, podemos dizer que descrevem uma linguagem exclusivamente através de símbolos e caracteres com funções especiais, que agrupados entre si e com caracteres literais formam uma seqüência, uma expressão, que entre outros pode vir a ser interpretada por uma linguagem de programação, ou um editor de textos \cite{Jargas:l08, Lewis:l00}.
+
+Será desenvolvida uma expressão regular para ser aplicada no relatório da doença que é apresentado pelo \emph{site} do OMIM. A expressão regular, como mostra a Figura \ref{fgr:AlgoritmoExtracao}, tem o objetivo de filtrar as palavras do texto que iniciem com letra maiúscula e que tenham apenas letras maiúsculas, números ou traço. Embora o exemplo tenha sido desenvolvido em Python a expressão pode ser usada praticamente em qualquer linguagem de programação sem sofrer alterações.
+
+\begin{figure}[htp]
+	\centering
+	\framebox{\includegraphics[scale=.8]{imgs/AlgoritmoExtracao}}
+	\caption{Algoritmo de extração dos dados}
+	\label{fgr:AlgoritmoExtracao}
+\end{figure}
+
+\subsection{Acesso aos sites do OMIM e do STRING}
+
+Primeiramente serão testadas outras formas de acesso aos \emph{sites} do OMIM e do STRING, por exemplo, por \emph{Web Service}. Conforme os testes que serão realizados com as formas de acesso, serão escolhidas as maneiras mais otimizadas de acessar os dados (Atividades 1 e 3).
+
+\subsection{Salvar e recuperar informações}
+
+O sistema permitirá salvar e recuperar consultas de doenças (Atividade 1), genes e proteínas escolhidas (Atividade 3), sendo que esses dois itens anteriores transmitem os dados em formato texto, redes de interação de proteínas (Atividade 6), sendo que esse é salvo em um arquivo do tipo XML, e a análise da ontologia gênica (Atividade 9), que é salva no formato do software Cytoscape.
+
+O sistema permitirá salvar em banco de dados as consultas realizadas pelo especialista, os genes e proteínas já consultados anteriormente, \emph{links} para redes de interação de proteínas já trabalhadas e informações do usuário para poder recuperar pesquisas personalizadas.
+
+\subsection{Interação com o software Cytoscape}
+
+A interação com o software Cytoscape se dará através da possibilidade de baixar o software através do sistema, para caso o especialista ainda não o tenha instalado em sua máquina, pesquisa por \emph{plug-ins} que poderão vir a ser usados pelo especialista no software Cytoscape e a importação dos arquivos XML de redes de interação de proteínas apresentados pelo sistema a ser desenvolvido (Atividade 7).
+
+\section{Considerações finais}
+
+Nesse capítulo foram apresentados os artefatos desenvolvidos visando o desenvolvimento do sistema e algumas ferramentas existentes para a criação e execução de \emph{workflows} científicos. Esse levantamento das ferramentas possibilitou o surgimento das idéias para melhorar o fluxo de pesquisa dos usuários que foram apresentadas.
+
+Criou-se um \emph{workflow} que visa demonstrar como será o fluxo de pesquisa no sistema, sendo esse explicado em detalhes, e foram desenvolvidos artefatos de software para demonstrar as interações dos usuários com o sistema. Também foi criado um esboço do algoritmo responsável por fazer a busca textual dos genes/proteínas no relatório da doença e foram levantados detalhes a serem melhor avaliados como o acesso aos \emph{sites} do OMIM e do STRING, o armazenamento e manipulação dos dados e a integração com o software Cytoscape.
+
+No próximo capítulo serão apresentados os artefatos e \emph{scripts} desenvolvidos com base no sistema e um manual do usuário.
