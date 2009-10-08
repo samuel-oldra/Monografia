@@ -1,0 +1,190 @@
+\chapter{Estudo de caso}
+
+Nesse capítulo serão apresentados os estudos de caso realizados com profissionais da área da informática e da biologia, a avaliação deles do sistema e minha avaliação como observador. O formulário de pesquisa pode ser visto no anexo B.
+
+\section{Primeiro estudo de caso}
+
+O primeiro estudo de caso foi realizado com o Prof. MSc. Daniel Luís Notari, profissional da área de informática, no dia 30 de novembro de 2009 às 17 horas e foi utilizado o navegador \emph{web} ``Firefox''.
+
+No estudo, iniciou a pesquisa procurando pelo termo ``alergics'', recebendo como resposta que o item não foi encontrado, na seqüência procurou pelos termos ``sarampo'', ``cachumba'' e ``caxumba'' obtendo a mesma resposta, já que esses quatro termos não existem na base de dados do OMIM. Então procurou pelo termo ``malaria'', obtendo assim a lista de ocorrências de doenças com esse termo. Selecionou a doença com o identificador ``+109270'' e com descrição principal ``SOLUTE CARRIER FAMILY 4 (ANION EXCHANGER), MEMBER 1; SLC4A1''. Após isso foram apresentadas a descrição da doença e algumas sugestões de proteínas encontradas na mesma, então foram removidas algumas proteínas e termos que não eram proteínas, acrescentou-se a proteína ``COX-1'' e realizou a pesquisa pelas proteínas ``SLC4A1'', ``BND3'', ``EMPB3'', ``EPB3'', ``AE1'' e ``COX-1'', obtendo assim a lista de ocorrências das proteínas em humanos. Então selecionou a única ocorrência da proteína ``SLC4A1'' e clicou para prosseguir, podendo assim visualizar a rede de interação da proteína, conforme mostra a Figura \ref{fgr:PrimeiroEstudoCasoSTRING}. Abaixo a descrição da proteína selecionada:
+
+\begin{itemize}
+	\item \emph{SLC4A1 Band 3 anion transport protein (Anion exchange protein 1) (AE 1) (Solute carrier family 4 member 1) (CD233 antigen); Band 3 is the major integral glycoprotein of the erythrocyte membrane. Band 3 has two functional domains. Its integral domain mediates a 1:1 exchange of inorganic anions across the membrane, whereas its cytoplasmic domain provides binding sites for cytoskeletal proteins, glycolytic enzymes, and hemoglobin}.
+\end{itemize}
+
+\begin{figure}[ht]
+	\centering
+	\framebox{\includegraphics[width=.9\textwidth]{imgs/PrimeiroEstudoCasoSTRING}}
+	\caption{Primeiro estudo de caso rede STRING}
+	\label{fgr:PrimeiroEstudoCasoSTRING}
+\end{figure}
+
+Após isso realizou o \emph{download} do arquivo XML da rede de interação da proteína, importou o mesmo no software Cytoscape, conforme mostra a Figura \ref{fgr:PrimeiroEstudoCasoCytoscape}, e realizou alguns testes. Depois voltou ao sistema, realizou o \emph{download} do arquivo XML do fluxo e respondeu ao questionário de avaliação do sistema.
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=.9\textwidth]{imgs/PrimeiroEstudoCasoCytoscape}
+	\caption{Primeiro estudo de caso rede Cytoscape}
+	\label{fgr:PrimeiroEstudoCasoCytoscape}
+\end{figure}
+
+Na avaliação realizada pelo Prof. MSc. Daniel Luís Notari o sistema foi considerado entre ótimo e bom, tendo o item com pior avaliação sido considerado regular, no caso, a busca de proteínas no relatório da doença.
+
+\section{Segundo estudo de caso}
+
+O segundo estudo de caso foi realizado com a Profa. Dra. Helena Graziottin Ribeiro, profissional da área de informática, no dia 1º de dezembro de 2009 às 17 horas e 30 minutos e foi utilizado o navegador \emph{web} ``Firefox''.
+
+No estudo, iniciou a pesquisa procurando pelo termo ``down syndrome'', obtendo assim a lista de ocorrências de doenças com esse termo. Selecionou a doença com o identificador ``\#190685'' e com descrição principal ``DOWN SYNDROME''. Após isso foram apresentadas a descrição da doença e algumas sugestões de proteínas encontradas na mesma, então foram removidas algumas proteínas e termos que não eram proteínas e realizou a pesquisa pelas proteínas ``DOWN'', ``REGION'', ``DCR'', ``DSCR'', ``GATA1'', ``ALL'', ``AML'', ``APP'', ``DS'', ``T4'', ``CH'' e ``TSH'', obtendo assim a lista de ocorrências das proteínas em humanos. Durante essa pesquisa das ocorrências das proteínas, como nem todos os termos pesquisados eram proteínas o sistema apresentou ``alertas'' para os termos ``DOWN'' e ``DSCR''. Então selecionou seis ocorrências da proteína ``REGION'' (que a princípio não é uma proteína) e clicou para prosseguir, podendo assim visualizar a rede de interação da proteína, conforme mostra a Figura \ref{fgr:SegundoEstudoCasoSTRING}. Abaixo as descrições das seis proteínas selecionadas:
+
+\begin{itemize}
+	\item \emph{DSCR10 Down syndrome critical region protein 10};
+	\item \emph{CECR6 Cat eye syndrome critical region protein 6};
+	\item \emph{DSCR4 Down syndrome critical region protein 4 (Down syndrome critical region protein B)};
+	\item \emph{DSCR8 Down syndrome critical region protein 8 (Malignant melanoma-associated protein 1) (MMA-1) (MTAG2 protein)};
+	\item \emph{DSCR6 Down syndrome critical region protein 6};
+	\item \emph{DSCR9 Down syndrome critical region protein 9}.
+\end{itemize}
+
+\begin{figure}[ht]
+	\centering
+	\framebox{\includegraphics[width=.9\textwidth]{imgs/SegundoEstudoCasoSTRING}}
+	\caption{Segundo estudo de caso rede STRING}
+	\label{fgr:SegundoEstudoCasoSTRING}
+\end{figure}
+
+Após isso realizou o \emph{download} do arquivo XML da rede de interação das proteínas, mas o mesmo não foi importado no Cytoscape por a Profa. não o ter instalado em sua máquina. Depois voltou ao sistema, realizou o \emph{download} do arquivo XML do fluxo, limpou o fluxo, fez \emph{upload} do arquivo XML do fluxo no sistema, inseriu um comentário no fluxo, depois o apagou e, por fim, respondeu ao questionário de avaliação do sistema.
+
+Na avaliação realizada pela Profa. Dra. Helena Graziottin Ribeiro o sistema foi considerado bom, tendo o item com melhor avaliação sido considerado ótimo, no caso, a rede de interação da proteína apresentada como resultado. Nos comentário de sua avaliação também destacou que a visualização do fluxo durante toda a pesquisa ajuda a saber em que fase dela se está trabalhando, sendo isso de grande importância.
+
+\section{Terceiro estudo de caso}
+
+O terceiro estudo de caso foi realizado com a Profa. MSc. Scheila de Avila e Silva, profissional da área de biologia, no dia 2 de dezembro de 2009 às 16 horas e 30 minutos e foi utilizado o navegador \emph{web} ``Firefox''.
+
+No estudo, iniciou a pesquisa procurando pelo termo ``turner syndrome'', obtendo assim a lista de ocorrências de doenças com esse termo. Selecionou a doença com o identificador ``\#163950'' e com descrição principal ``NOONAN SYNDROME 1; NS1''. Após isso foram apresentadas a descrição da doença e algumas sugestões de proteínas encontradas na mesma, então foram removidos termos que não eram proteínas e realizou a pesquisa pelas proteínas ``NS1'', ``PTPN11'', ``SHP2'', ``SH2'', ``NF1'', ``NFNS'', ``KRAS'' e ``NS3'', obtendo assim a lista de ocorrências das proteínas em humanos. Durante essa pesquisa das ocorrências das proteínas, como um dos termos pesquisados não era uma proteína (``TPN11'') o sistema apresentou um ``alerta'' para o mesmo. Então selecionou quatro ocorrências de proteínas, duas da ``NS1'', uma da ``NF1'' e uma da ``KRAS'', e clicou para prosseguir, podendo assim visualizar a rede de interação da proteína, conforme mostra a Figura \ref{fgr:TerceiroEstudoCasoSTRING}. Abaixo as descrições das quatro proteínas selecionadas:
+
+\begin{itemize}
+	\item \emph{CPSF4 Cleavage and polyadenylation specificity factor subunit 4 (Cleavage and polyadenylation specificity factor 30 kDa subunit) (CPSF 30 kDa subunit) (NS1 effector domain-binding protein 1) (Neb-1) (No arches homolog); Component of the cleavage and polyadenylation specificity factor (CPSF) complex that play a key role in pre-mRNA 3'-end formation, recognizing the AAUAAA signal sequence and interacting with poly(A) polymerase and other factors to bring about cleavage and poly(A) addition. CPSF4 binds RNA polymers with a preference for poly(U)};
+	\item \emph{PTPN11 Tyrosine-protein phosphatase non-receptor type 11 (EC 3.1.3.48) (Protein-tyrosine phosphatase 2C) (PTP-2C) (PTP-1D) (SH-PTP3) (SH- PTP2) (SHP-2) (Shp2); Acts downstream of various receptor and cytoplasmic protein tyrosine kinases to participate in the signal transduction from the cell surface to the nucleus};
+	\item \emph{NF1 Neurofibromin (Neurofibromatosis-related protein NF-1) [Contains: Neurofibromin truncated]; Stimulates the GTPase activity of Ras. NF1 shows greater affinity for Ras GAP, but lower specific activity. May be a regulator of Ras activity};
+	\item \emph{KRAS GTPase KRas precursor (K-Ras 2) (Ki-Ras) (c-K-ras) (c-Ki-ras); Ras proteins bind GDP/GTP and possess intrinsic GTPase activity}.
+\end{itemize}
+
+\begin{figure}[ht]
+	\centering
+	\framebox{\includegraphics[width=.9\textwidth]{imgs/TerceiroEstudoCasoSTRING}}
+	\caption{Terceiro estudo de caso rede STRING}
+	\label{fgr:TerceiroEstudoCasoSTRING}
+\end{figure}
+
+Após isso realizou o \emph{download} do arquivo XML da rede de interação das proteínas, mas o mesmo não foi importado no Cytoscape por a Profa. não o ter instalado em sua máquina. Depois voltou ao sistema, realizou o \emph{download} do arquivo XML do fluxo e respondeu ao questionário de avaliação do sistema.
+
+Na avaliação realizada pela Profa. MSc. Scheila de Avila e Silva o sistema foi considerado ótimo, tendo o item com com pior avaliação sido considerado bom, no caso, a busca de proteínas no relatório da doença. Nos comentários de sua avaliação destacou que o sistema é útil para biólogos que trabalham com redes e relações de informações de diferentes bancos de dados, e que o trabalho deveria ser ampliado para integração de informações de outros bancos de dados.
+
+\section{Quarto estudo de caso}
+
+O quarto estudo de caso foi realizado com o Prof. Dr. Diego Bonatto, profissional da área de biologia, no dia 3 de dezembro de 2009 às 14 horas e 30 minutos e foi utilizado o navegador \emph{web} ``Firefox''. Nas subseções que seguem serão apresentadas as três pesquisas realizadas.
+
+\subsection{Primeira pesquisa}
+
+No primeiro estudo, iniciou a pesquisa procurando pelo termo ``huntington'', obtendo assim a lista de ocorrências de doenças com esse termo. Selecionou a doença com o identificador ``\#143100'' e com descrição principal ``HUNTINGTON DISEASE; HD''. Após isso foram apresentadas a descrição da doença e algumas sugestões de proteínas encontradas na mesma, então foram removidos os termos que não eram proteínas e realizou a pesquisa pelas proteínas ``HD'', ``HTT'', ``MRI'', ``XL'', ``DM1'', ``NF1'', ``NF2'', ``D4S10'', ``SE'', ``G8'' e ``MMSE'', obtendo assim a lista de ocorrências das proteínas em humanos. Durante essa pesquisa das ocorrências das proteínas, como nem todos os termos pesquisados eram proteínas o sistema apresentou ``alertas'' para os termos ``D4S10'' e ``MMSE''. Então selecionou quatorze ocorrências de proteínas, quatro da ``HD'', uma da ``HTT'', uma da ``MRI'', uma da ``XL'', uma da ``DM1'', duas da ``NF1'', uma da ``NF2'', duas da ``SE'' e um da ``G8'', e clicou para prosseguir, podendo assim visualizar a rede de interação das proteínas, conforme mostra a Figura \ref{fgr:QuartoEstudoCasoSTRING1}. Abaixo as descrições das quatorze proteínas selecionadas:
+
+\pagebreak
+
+\begin{itemize}
+	\item \emph{OPTN Optineurin (Optic neuropathy-inducing protein) (E3-14.7K-interacting protein) (FIP-2) (Huntingtin-interacting protein HYPL) (NEMO-related protein) (Transcription factor IIIA-interacting protein) (TFIIIA- IntP); Plays a neuroprotective role in the eye and optic nerve. Probably part of the TNF-alpha signaling pathway that can shift the equilibrium toward induction of cell death. May act by regulating membrane trafficking and cellular morphogenesis via a complex that contains Rab8 and hungtingtin (HD). May constitute a cellular target for adenovirus E3 14.7, an inhibitor of TNF-alpha func [\ldots]};
+	\item \emph{HDDC3 HD domain-containing protein 3};
+	\item \emph{PTPN23 Tyrosine-protein phosphatase non-receptor type 23 (EC 3.1.3.48) (His- domain-containing protein tyrosine phosphatase) (HD-PTP) (Protein tyrosine phosphatase TD14) (PTP-TD14); May act as a negative regulator of Ras-mediated mitogenic activity};
+	\item \emph{FBXO16 Zinc finger protein 395 (Papillomavirus-binding factor) (Papillomavirus regulatory factor 1) (PRF-1) (Huntington disease gene regulatory region-binding protein 2) (HDBP-2) (HD gene regulatory region-binding protein 2) (HD-regulating factor 2) (HDRF-2); Probably recognizes and binds to some phosphorylated proteins and promotes their ubiquitination and degradation};
+	\item \emph{SLC6A4 Sodium-dependent serotonin transporter (5HT transporter) (5HTT); Terminates the action of serotonin by its high affinity sodium-dependent reuptake into presynaptic terminals};
+	\item \emph{C7orf49 Uncharacterized protein C7orf49; May act as a regulator of proteasome (By similarity)};
+	\item \emph{RTN4 Reticulon-4 (Neurite outgrowth inhibitor) (Nogo protein) (Foocen)\\(Neuroendocrine-specific protein) (NSP) (Neuroendocrine-specific protein C homolog) (RTN-x) (Reticulon-5); Potent neurite growth inhibitor in vitro and plays a role both in the restriction of axonal regeneration after injury and in structural plasticity in the CNS. Isoform 2 reduces the anti-apoptotic activity of Bcl-xl and Bcl-2. This is likely consecutive to their change in subcellular location, from the mitochondria to the endoplasmic reticulum, after binding and sequestration. Isoform 2 and isoform 3 inhibit BACE1 ac [\ldots]};
+	\item \emph{DMPK Myotonin-protein kinase (EC 2.7.11.1) (Myotonic dystrophy protein kinase) (MDPK) (DM-kinase) (DMK) (DMPK) (MT-PK); Critical to the modulation of cardiac contractility and to the maintenance of proper cardiac conduction activity. Phosphorylates phospholamban};
+	\item \emph{NFIC Nuclear factor 1 C-type (Nuclear factor 1/C) (NF1-C) (NFI-C) (NF-I/C) (CCAAT-box-binding transcription factor) (CTF) (TGGCA-binding protein); Recognizes and binds the palindromic sequence 5'-TTGGCNNNNNGCCAA-3' present in viral and cellular promoters and in the origin of replication of adenovirus type 2. These proteins are individually capable of activating\\transcription and replication (By similarity)};
+	\item \emph{APOBEC1 C->U-editing enzyme APOBEC-1 (EC 3.5.4.-) (Apolipoprotein B mRNA- editing enzyme 1) (HEPR); Catalytic component of the apolipoprotein B mRNA editing enzyme complex which is responsible for the postranscriptional editing of a CAA codon for Gln to a UAA codon for stop in the APOB mRNA. Also involved in CGA (Arg) to UGA (Stop) editing in the NF1 mRNA};
+	\item \emph{NF2 Merlin (Moesin-ezrin-radixin-like protein) (Neurofibromin-2) (Schwannomin) (Schwannomerlin); Probably acts as a membrane stabilizing protein. May inhibit PI3 kinase by binding to AGAP2 and impairing its stimulating activity};
+	\item \emph{EZH2 Enhancer of zeste homolog 2 (ENX-1); Polycomb group (PcG) protein. Catalytic subunit of the PRC2/EED-EZH2 complex, which methylates `Lys-9' and `Lys-27' of histone H3, leading to transcriptional repression of the affected target gene. Able to mono-, di- and trimethylate `Lys-27' of histone H3 to form H3K27me1, H3K27me2 and H3K27me3, respectively. Compared to EZH2-containing complexes, it is more abundant in embryonic stem cells and plays a major role in forming H3K27me3, which is required for embryonic stem cell identity and proper differentiation. The PRC2/EED-EZH2 complex may also se [\ldots]};
+	\item \emph{FUT1 Galactoside 2-alpha-L-fucosyltransferase 1 (EC 2.4.1.69)(GDP-L-fucose:\\beta-D-galactoside 2-alpha-L-fucosyltransferase 1) (Alpha(1,2)FT 1) (Fucosyltransferase 1) (Blood group H alpha 2- fucosyltransferase); Creates a soluble precursor oligosaccharide FuC-alpha ((1,2)Galbeta-) called the H antigen which is an essential substrate for the final step in the soluble A and B antigen synthesis pathway. H and Se enzymes fucosylate the same acceptor substrates but exhibit different Km values};
+	\item \emph{G8 Protein G8}.
+\end{itemize}
+
+\begin{figure}[ht]
+	\centering
+	\framebox{\includegraphics[width=.9\textwidth]{imgs/QuartoEstudoCasoSTRING1}}
+	\caption{Quarto estudo de caso rede STRING primeira pesquisa}
+	\label{fgr:QuartoEstudoCasoSTRING1}
+\end{figure}
+
+Após isso realizou o \emph{download} do arquivo XML da rede de interação da proteína, importou o mesmo no software Cytoscape, mas devido as proteínas da rede não terem nenhuma ligação o Cytoscape apresentou uma tela em branco.
+
+\subsection{Segunda pesquisa}
+
+No segundo estudo, iniciou a pesquisa procurando pelo termo ``charcot marie'', obtendo assim a lista de ocorrências de doenças com esse termo. Selecionou a doença com o identificador ``\#604563'' e com descrição principal ``CHARCOT-MARIE-TOOTH DISEASE, TYPE 4B2; CMT4B2''. Após isso foram apresentadas a descrição da doença e algumas sugestões de proteínas encontradas na mesma, então foram removidos os termos que não eram proteínas e realizou a pesquisa pelas proteínas ``CMT4B2'', ``SBF2'', ``CMT4B1'', ``MTMR2'', ``CMT'', ``CMT4A'', ``CSF'', ``CMT4B'' e ``MTMR13'', obtendo assim a lista de ocorrências das proteínas em humanos. Durante essa pesquisa das ocorrências das proteínas, como um dos termos pesquisados não era uma proteína (``CMT4A'') o sistema apresentou um ``alerta'' para o mesmo. Então selecionou quatorze ocorrências de proteínas, uma da ``CMT4B2'', uma da ``SBF2'', uma da ``CMT4B1'', uma da ``MTMR2'', uma da ``CMT'', sete da ``CSF'', uma da ``CMT4B'' e uma da ``MTMR13'', e clicou para prosseguir, podendo assim visualizar a rede de interação da proteína, conforme mostra a Figura \ref{fgr:QuartoEstudoCasoSTRING2}. Abaixo as descrições das proteínas selecionadas, sendo que as repetidas não serão citadas mais de uma vez:
+
+\begin{itemize}
+	\item \emph{SBF2 Myotubularin-related protein 13 (SET-binding factor 2); Not known};
+	\item \emph{MTMR2 Myotubularin-related protein 2 (EC 3.1.3.-); Phosphatase that acts on lipids with a phosphoinositol headgroup. Has phosphatase activity towards phosphatidylinositol- 3-phosphate and phosphatidylinositol-3,5-bisphosphate};
+	\item \emph{ENSG00000181464 CMT duplicated region transcript 1};
+	\item \emph{CSF2RA Granulocyte-macrophage colony-stimulating factor receptor alpha chain precursor (GM-CSF-R-alpha) (GMR) (CD116 antigen) (CDw116); Low\\affinity receptor for granulocyte-macrophage colony- stimulating factor. Transduces a signal that results in the proliferation, differentiation, and functional activation of hematopoietic cells};
+	\item \emph{NFATC2 Nuclear factor of activated T-cells, cytoplasmic 2 (T cell transcription factor NFAT1) (NFAT pre-existing subunit) (NF-ATp); Plays a role in the inducible expression of cytokine genes in T-cells, especially in the induction of the IL-2, IL-3, IL-4, TNF-alpha or GM-CSF};
+	\item \emph{CSF3R Granulocyte colony-stimulating factor receptor precursor (G-CSF-R) (CD114 antigen); Receptor for granulocyte colony-stimulating factor (CSF3). In addition it may function in some adhesion or recognition events at the cell surface};
+	\item \emph{CBFB Core-binding factor subunit beta (CBF-beta) (Polyomavirus enhancer- binding protein 2 beta subunit) (PEBP2-beta) (PEA2-beta) (SL3-3 enhancer factor 1 beta subunit) (SL3/AKV core-binding factor beta subunit); CBF binds to the core site, 5'-PYGPYGGT-3', of a number of enhancers and promoters, including murine leukemia virus, polyomavirus enhancer, T-cell receptor enhancers, LCK, IL-3 and GM-CSF promoters. CBFB enhances DNA binding by RUNX1};
+	\item \emph{CSF2 Granulocyte-macrophage colony-stimulating factor precursor (GM-CSF) (Colony-stimulating factor) (CSF) (Sargramostim) (Molgramostin); Cytokine that stimulates the growth and differentiation of hematopoietic precursor cells from various lineages, including granulocytes, macrophages, eosinophils and erythrocytes};
+	\item \emph{CSF1R Macrophage colony-stimulating factor 1 receptor precursor (EC 2.7.10.1) (CSF-1-R) (Fms proto-oncogene) (c-fms) (CD115 antigen); Protein tyrosine-kinase transmembrane receptor for CSF1 and IL34};
+	\item \emph{IL10 Interleukin-10 precursor (IL-10) (Cytokine synthesis inhibitory factor) (CSIF); Inhibits the synthesis of a number of cytokines, including IFN-gamma, IL-2, IL-3, TNF and GM-CSF produced by activated macrophages and by helper T-cells}.
+\end{itemize}
+
+\begin{figure}[htp]
+	\centering
+	\framebox{\includegraphics[width=.9\textwidth]{imgs/QuartoEstudoCasoSTRING2}}
+	\caption{Quarto estudo de caso rede STRING segunda pesquisa}
+	\label{fgr:QuartoEstudoCasoSTRING2}
+\end{figure}
+
+Após isso realizou o \emph{download} do arquivo XML da rede de interação da proteína, importou o mesmo no software Cytoscape, conforme mostra a Figura \ref{fgr:QuartoEstudoCasoCytoscape2}, e realizou alguns testes. Depois voltou ao sistema e inseriu um comentário no fluxo antes de realizar o terceiro estudo de caso.
+
+\begin{figure}[htp]
+	\centering
+	\includegraphics[width=.9\textwidth]{imgs/QuartoEstudoCasoCytoscape2}
+	\caption{Quarto estudo de caso rede Cytoscape segunda pesquisa}
+	\label{fgr:QuartoEstudoCasoCytoscape2}
+\end{figure}
+
+\subsection{Terceira pesquisa}
+
+No terceiro estudo, iniciou a pesquisa procurando pelo termo ``cockayne'', obtendo assim a lista de ocorrências de doenças com esse termo. Selecionou a doença com o identificador ``\#216400'' e com descrição principal ``COCKAYNE SYNDROME, TYPE A; CSA''. Após isso foram apresentadas a descrição da doença e algumas sugestões de proteínas encontradas na mesma, então foram removidos os termos que não eram proteínas e realizou a pesquisa pelas proteínas ``CSA'', ``CKN1'', ``ERCC8'', ``CSB'', ``ERCC6'', ``ERCC3'', ``ERCC2'', ``ERCC5'' e ``COFS'', obtendo assim a lista de ocorrências das proteínas em humanos. Então selecionou treze ocorrências de proteínas, cinco da ``CSA'', uma da ``CKN1'', uma da ``ERCC8'', uma da ``CSB'', uma da ``ERCC6'', uma da ``ERCC3'', uma da ``ERCC2'', uma da ``ERCC5'' e uma da ``COFS'', e clicou para prosseguir, podendo assim visualizar a rede de interação da proteína, conforme mostra a Figura \ref{fgr:QuartoEstudoCasoSTRING3}. Abaixo as descrições das proteínas selecionadas, sendo que as repetidas não serão citadas mais de uma vez:
+
+\begin{itemize}
+	\item \emph{ERCC8 DNA excision repair protein ERCC-8 (Cockayne syndrome WD repeat protein CSA); Involved in transcription};
+	\item \emph{COPS3 COP9 signalosome complex subunit 3 (Signalosome subunit 3) (SGN3) (JAB1-containing signalosome subunit 3); Component of the COP9 signalosome complex (CSN), a complex involved in various cellular and developmental processes. The CSN complex is an essential regulator of the ubiquitin (Ubl) conjugation pathway by mediating the deneddylation of the cullin subunits of SCF-type E3 ligase complexes, leading to decrease the Ubl ligase activity of SCF-type complexes such as SCF, CSA or DDB2. The complex is also involved in phosphorylation of p53/TP53, c-jun/JUN, IkappaBalpha/NFKBIA, ITPK1 and I [\ldots]};
+	\item \emph{COPS4 COP9 signalosome complex subunit 4 (Signalosome subunit 4) (SGN4) (JAB1-containing signalosome subunit 4); Component of the COP9 signalosome complex (CSN), a complex involved in various cellular and developmental processes. The CSN complex is an essential regulator of the ubiquitin (Ubl) conjugation pathway by mediating the deneddylation of the cullin subunits of SCF-type E3 ligase complexes, leading to decrease the Ubl ligase activity of SCF-type complexes such as SCF, CSA or DDB2. The complex is also involved in phosphorylation of p53/TP53, c-jun/JUN, IkappaBalpha/NFKBIA, ITPK1 and I [\ldots]};
+	\item \emph{HSPA9 Stress-70 protein, mitochondrial precursor (75 kDa glucose-regulated protein) (GRP 75) (Peptide-binding protein 74) (PBP74) (Mortalin) (MOT); Implicated in the control of cell proliferation and cellular aging. May also act as a chaperone};
+	\item \emph{COPS6 COP9 signalosome complex subunit 6 (Signalosome subunit 6) (SGN6) (JAB1-containing signalosome subunit 6) (Vpr-interacting protein) (hVIP) (MOV34 homolog); Component of the COP9 signalosome complex (CSN), a complex involved in various cellular and developmental processes. The CSN complex is an essential regulator of the ubiquitin (Ubl) conjugation pathway by mediating the deneddylation of the cullin subunits of SCF-type E3 ligase complexes, leading to decrease the Ubl ligase activity of SCF-type complexes such as SCF, CSA or DDB2. The complex is also involved in phosphorylation of p53/ [\ldots]};
+	\item \emph{ERCC6 DNA excision repair protein ERCC-6 (EC 3.6.1.-) (ATP-dependent helicase ERCC6) (Cockayne syndrome protein CSB); Is involved in the\\preferential repair of active genes. Presumed DNA or RNA unwinding function. Corrects the UV survival and RNA synthesis after UV exposure of\\Cockayne syndrome complementation group B};
+	\item \emph{ERCC3 TFIIH basal transcription factor complex helicase XPB subunit (EC 3.6.1.-) (Basic transcription factor 2 89 kDa subunit) (BTF2-p89) (TFIIH 89 kDa subunit) (DNA-repair protein complementing XP-B cells) (Xeroderma pigmentosum group B-complementing protein); ATP-dependent 3'-5' DNA helicase, component of the core- TFIIH basal transcription factor, involved in nucleotide excision repair (NER) of DNA and, when complexed to CAK, in RNA transcription by RNA polymerase II. Acts by opening DNA either around the RNA transcription start site or the DNA damage};
+	\item \emph{ERCC2 TFIIH basal transcription factor complex helicase subunit (EC 3.6.1.-) (DNA-repair protein complementing XP-D cells) (Xeroderma pigmentosum group D-complementing protein) (CXPD) (DNA excision repair protein ERCC-2); ATP-dependent 5'-3' DNA helicase, component of the core- TFIIH basal transcription factor. Involved in nucleotide excision repair (NER) of DNA by opening DNA around the damage, and in RNA transcription by RNA polymerase II by anchoring the CDK-activating kinase (CAK) complex, composed of CDK7, cyclin H and MAT1, to the core-TFIIH complex. Involved in the regulation of vitam [\ldots]};
+	\item \emph{ERCC5 DNA-repair protein complementing XP-G cells (Xeroderma pigmentosum group G-complementing protein) (DNA excision repair protein ERCC-5); Single-stranded structure-specific DNA endonuclease involved in DNA excision repair. Makes the 3'incision in DNA nucleotide excision repair (NER). Acts as a cofactor for a DNA glycosylase that removes oxidized pyrimidines from DNA. May also be involved in transcription-coupled repair of this kind of damage, in transcription by RNA polymerase II, and perhaps in other processes too}.
+\end{itemize}
+
+\begin{figure}[ht]
+	\centering
+	\framebox{\includegraphics[width=.9\textwidth]{imgs/QuartoEstudoCasoSTRING3}}
+	\caption{Quarto estudo de caso rede STRING terceira pesquisa}
+	\label{fgr:QuartoEstudoCasoSTRING3}
+\end{figure}
+
+Após isso realizou o \emph{download} do arquivo XML da rede de interação da proteína, importou o mesmo no software Cytoscape, conforme mostra a Figura \ref{fgr:QuartoEstudoCasoCytoscape3}, e realizou alguns testes. Depois voltou ao sistema, realizou o download do arquivo XML do fluxo, limpou o fluxo, fez \emph{upload} do arquivo XML do fluxo no sistema e, por fim, respondeu ao questionário de avaliação do sistema.
+
+\begin{figure}[htp]
+	\centering
+	\includegraphics[width=.9\textwidth]{imgs/QuartoEstudoCasoCytoscape3}
+	\caption{Quarto estudo de caso rede Cytoscape terceira pesquisa}
+	\label{fgr:QuartoEstudoCasoCytoscape3}
+\end{figure}
+
+Na avaliação realizada pelo Prof. Dr. Diego Bonatto o sistema foi considerado entre ótimo e bom. Nos comentários que fez do sistema destacou que o sistema será bastante útil e sugeriu que nas sugestões de proteínas encontradas no relatório da doença sejam mostradas mais proteínas, sendo umas trinta um bom número, e também que sejam desconsideradas proteínas com menos de três caracteres, pois geralmente não são usadas por ele e que se necessário podem ser encontradas aumentando o número de interações mínimas da rede de interação das proteínas no STRING.
+
+\section{Considerações finais}
+
+Na minha avaliação de observador percebi que as doenças foram pesquisadas, na maioria dos casos, com termos em português e não havia nada no sistema que especificasse que o termo deveria ser em inglês.
+
+E também que na busca de proteínas no relatório da doença, às vezes são trazidos termos que não são proteínas e mesmo isso não sendo um problema, visto que a idéia daquela busca é trazer uma lista de sugestões de proteínas, a busca por esses termos causa ``alertas'' no sistema, que mesmo não interrompendo o fluxo de pesquisa são visualmente desagradáveis ao usuário.
