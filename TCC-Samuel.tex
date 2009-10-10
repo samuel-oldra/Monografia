@@ -1,0 +1,57 @@
+% MODELO DE TCC SAMUEL
+
+% BIBLIOTECAS
+\documentclass{iiufrgs}
+\usepackage[latin1]{inputenc} % Pacote para acentuação
+\usepackage[T1]{fontenc}      % Pacote para problemas ç
+\usepackage{graphicx}         % Pacote para importar figuras
+\usepackage{setspace}         % Espaçamento
+\usepackage{listings}         % Pacote para usar código fonte
+\usepackage{color}            % Pacote para usar cores
+\usepackage{hyperref}         % Cria os marcadores
+\usepackage{lscape}           % Pacote para usar folha paisagem
+\onehalfspacing               % Espaçamento 1,5
+
+% MUDANDO LABEL DOS CÓDIGOS E DA LISTA DE CÓDIGOS
+\renewcommand{\lstlistingname}{Script}
+\renewcommand{\lstlistlistingname}{Lista de Scripts}
+
+% CONFIGURAÇÕES PARA CÓDIGO FONTE
+\definecolor{listinggray}{gray}{0.95}        % Definição de cor
+%\lstset{frame=trBL, frameround=tttt}        % Formato das bordas aredondadas
+\lstset{backgroundcolor=\color{listinggray}} % Cor de fundo do código
+\lstset{frame=bT}                            % Outro formato das bordas (Comentar os 3 itens anteriores)
+\lstset{captionpos=b}                        % Mostra label abaixo do código
+\lstset{numbers=left}                        % Mostra número da linha
+\lstset{numberstyle=\footnotesize}           % Mostra número da linha menor
+\lstset{showstringspaces=false}              % Mostra espaço nas strings
+\lstset{basicstyle=\tt}                      % Fonte do código fonte
+\lstset{keywordstyle=\color{blue}}           % Cor das palavras reservadas
+\lstset{stringstyle=\color{green}}           % Cor das strings
+%\lstset{keywordstyle=\color{black}}         % Cor das palavras reservadas
+%\lstset{stringstyle=\color{black}}          % Cor das strings
+
+% CAPA
+\title{Integração de Dados Biológicos\\- Proteínas e Doenças Gênicas -}
+\author{Oldra}{Samuel Brando}
+\advisor[Prof. MSc.]{Notari}{Daniel Luís}
+%\coadvisor[Prof. Dr.]{Silva}{João Luís Tavares da}
+\date{Dezembro}{2009}
+
+% INÍCIO DO DOCUMENTO
+\begin{document}
+	\include{TCC-Hyphenation}
+	\include{TCC-PreTextuais}
+	\include{TCC-Introducao}
+	\include{TCC-Capitulo01}
+	\include{TCC-Capitulo02}
+	\include{TCC-Capitulo03}
+	\include{TCC-Capitulo04}
+	\include{TCC-Capitulo05}
+	%\include{TCC-CapModelo}
+	\include{TCC-Conclusao}
+	\bibliography{TCC-Bibliografia}
+	\bibliographystyle{abnt}
+	\include{TCC-Anexos}
+% FIM DO DOCUMENTO
+\end{document}
