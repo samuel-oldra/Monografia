@@ -1,0 +1,213 @@
+%
+% exemplo genérico de uso da classe deinucs.cls
+% $Id: deinucs.tex,v 1.0 2002/06/28 13:33:00 avila Exp $
+%
+% UCS TeX Users Group
+% Departamento de Informática --- UCS
+% Caxias do Sul, Brasil
+% http://dein.ucs.br
+%
+%
+% Copyright (C) 2002 UCS TeX Users Group
+% This is free software, distributed under the GNU GPL; please take
+% a look in `deinucs.cls' to see complete information on using, copying
+% and redistributing these files
+%
+\documentclass {iiufrgs}
+\usepackage[latin1]{inputenc}   % pacote para acentuação
+\usepackage{graphicx}       % pacote para importar figuras
+\usepackage{setspace}		% Espaçamento
+\onehalfspacing				% espaçamento 1,5
+%
+% Informações gerais
+%
+\title{Planejamento de Trajetórias para Robôs com Obstáculos}
+
+\author{Muratore}{Fernado A.}
+
+% orientador e co-orientador são opcionais:
+\advisor[Prof.]{Martinotto}{André L.}
+\coadvisor[Prof.]{Cortelleti}{Daniel}
+
+\date{Julho}{2008}
+
+%
+% palavras-chave
+% iniciar todas com letras minúsculas, exceto no caso de abreviaturas
+\keyword{Modelo} 
+\keyword{LaTeX}
+
+%
+% inicio do documento
+%
+\begin{document}
+
+% folha de rosto
+\maketitle
+
+% dedicatoria
+\begin{dedicatoria}
+\sffamily\itshape
+``Only two things are infinite,\\
+the universe and human stupidity, \\
+and I'm not sure about the former.''\\
+--- \textsc{Albert Einstein}
+
+\end{dedicatoria}
+
+% agradecimentos
+\begin{agradecimentos}
+AGRADECIMENTOS\ldots
+\end{agradecimentos}
+
+% sumario
+\tableofcontents
+
+% lista de abreviaturas
+% o parametro deve ser a abreviatura mais longa
+\begin{listofabbrv}{SERENDIP}
+	\item[TCC] Trabalho de Conclusão de Curso
+\end{listofabbrv}
+	
+% lista de figuras
+\listoffigures
+
+% lista de tabelas
+\listoftables
+
+% resumo
+\begin{abstract}
+
+\end{abstract}
+
+% resumo em ingles
+% como parametros devem ser passados o titulo em ingles e as palavras-chave
+% em ingles, separadas por vírgulas
+\begin{englishabstract}{Eletroencephalogram processing using the BOINC plataform}{public resource computing, BOINC, Eletroencephalogram}
+\end{englishabstract}
+
+
+
+
+\chapter{Introdução}
+
+Teste de citação \cite{Anderson:2004} 
+
+\chapter{Robótica}
+
+O termo robótica foi criado por Asimov para definir a ciência que estuda os robôs e que se fundamenta pelas três leis básicas (SCHIAVICCO,SICILIANO,1995):
+
+\begin{enumerate}
+
+\item 1ª) Um robô não pode fazer mal algum a um ser humano nem por omissão, e não pode permanecer inoperante em uma situação que um  humano se exponha a situação de perigo.
+
+\item 2ª) Um robô sempre obedece as ordens de seres humanos, exceto quando  essas ordens entram em conflito com a 1ª lei.
+
+\item 3ª) Um robô deve se proteger exceto quando entra em conflito com a 1ª e  2ª  leis.
+
+\end{enumerate}
+
+Após algum tempo Asimov acrescentou a lei zero da robótica (CLARK,1993):
+
+\begin{enumerate}
+
+\item Lei 0) Um robô não pode fazer mal a humanidade ou permanecer indiferente em uma situação que prejudique a humanidade.
+
+\end{enumerate}
+
+
+\section{Componentes do Robô}
+
+De acordo com o Robot Institute of America, o robô é um equipamento multifuncional e reprogramável, projetado para movimentar ferramentas ou dispositivos especializados através de movimentos variáveis e programados para a execução de uma infinidade de tarefas [BOT94].
+
+Os componentes de um robô são:
+
+\begin{itemize}
+
+\item Mecanismo: refere-se à parte mecânica do robô. O mecanismo é composto por:
+
+	\begin{itemize}
+		\item Dispositivo de deslocamento: que dá a movimentação do robô no ambiente. O que é de estrema importância na caracterização de um robô 				móvel;
+
+		\item Braço: Determina o alcance do efetuador no espaço Euclidiano. É muito comum em robôs industriais;
+
+		\item Punho: determina a orientação;
+
+		\item Efetuadores: escolhidos conforme a tarefa a ser realizada pelo robô (exemplos: garra, pistola de solda ou de pintura). Podem ser 				acionados por motor elétrico, sistema hidráulico e pneumático. Já atuadores são responsáveis pelos movimentos do robô (por exemplo, 				rodas, hélices, articulações, esteiras, lemes). O atuador faz com que cada eixo seja acionado. Logo todo efetuador é um atuador, 				pois efetuadores nada mais são do que articulações [SCH99];
+	\end{itemize}
+
+\item Sistema de Acionamento: transforma a energia elétrica, hidráulica ou pneumática (ou combinação) em energia cinética, utilizada nos dispositivos de deslocamento, junto do braço e do punho e nos efetuadores. [BOT94];
+
+
+\item Sistema de Percepção: informa sobre o estado do robô e o ambiente onde ele está efetuando suas operações. A utilização de sensores é opcional, contudo são estes que dão a idéia ao robô daquilo que suas ações estão causando ao ambiente e inclusive pode monitorar seu próprios parâmetros como, por exemplo, carga da bateria. Existem sensores de diversos tipos:
+ 
+	\begin{itemize}
+		\item Encoder: mede o deslocamento;
+
+		\item Infravermelho: mede a distância entre o sensor e o obstáculo a frente é calculado pela a reflexão da luz no obstáculo resultando numa 				estimativa de distência;
+
+		\item Ultra-som ou sonar: mede a distancia entre o sensor e o obstáculo a frente é calculado pela a reflexão do som no obstáculo resultando 				numa estimativa de distancia
+		
+		\item Contato (mede a pressão exercida no obstáculo a frente em um caso de colisão)
+		\item Visão artificial (câmeras filmadoras,fotográficas,etc. requer técnicas de determinação de posicionamento)
+		\item Outros sensores(voz acelerômetros, inclinação radar giroscópio,etc.) [blabla e sbc2005];
+
+	\end{itemize}
+
+	\item Sistema de Controle: controla os movimentos do robô. É responsável pelo comportamento do robô, que pode ser fixo e repetitivo, ou 		inteligente, tomando decisões e reagindo conforme a situação encontrada, aprendendo com suas atitudes e incorporando-as ao seu conhecimento 		[ e SBC BOT94]. A figura 1 mostra os quatro componentes de um robô;
+
+
+\end{itemize}
+
+
+\section{Classificação dos Robôs}
+
+
+Os robôs são classificados, quanto à informação de entrada vinda do sistema de percepção, em [BOT94]:
+
+
+\begin{itemize}
+
+	\item Manipuladores Manuais: controlados exclusivamente pelo homem;
+
+	\item	Robôs Seqüenciais : cada passo do movimento é solicitado de uma seqüência pré-estabelecida. O controle é uma malha aberta, possuem 2 a 4 			graus de liberdade e executam apenas tarefas simples;
+
+	\item	Robôs a ciclos programáveis: são mais sofisticados. Possuem de 4 a 8 graus de liberdade e em função do modo de programação podem ser 			classificados em dois tipos: robôs "Playback" (repetem a seqüência de movimentos programados) e robôs programáveis por linguagem ou 			qualquer outro método de programação indireta (programação feita com entradas de forma numérica ou de uma representação elaborada pelo 			operador);
+	
+	\item 	Robôs Inteligentes: são máquinas ou agrupamento de máquinas capazes de se adaptar às modificações do ambiente mediante sistemas evoluídos 			de controle, percepção, comunicação e decisão, ao passo que, nos tipos anteriores, as ações do robô sobre o seu ambiente eram, a priori, 			realizadas via sincronização.  Os robôs inteligentes devem ter um certo grau de autonomia e devem ainda ser capazes de executar tarefas 		via "interações" com o ambiente;
+\end{itemize}
+
+\section{Forma de Navegação dos Robôs}
+
+No princípio os robôs se deslocavam em áreas fixas (marcas no chão) e realizavam tarefas próximas destas áreas fixas. Esta categoria de robôs é denominada fixa [SCH99].
+
+Com o crescente interesse de utilizar robôs, estes passaram a se deslocar em ambientes que poderiam sofrer mudanças dos obstáculos e as tarefas poderiam tomar outra posição no ambiente. Assim surgiu a categoria de robôs móveis. 
+
+Robôs deslocam-se num ambiente e realizam tarefas ao longo da navegação. Para que eles se desloquem ou naveguem é necessária uma tecnologia de controle de movimentos. Esta técnica envolve 3 tarefas [SCH99] :
+
+\begin{enumerate}
+
+	\item Mapeamento do ambiente, o reconhecimento do ambiente no qual o robô está inserido é denominado mapeamento de ambiente. Este mapeamento pode 			ser obtido de mapas já existentes ou através de aprendizado pelo robô, baseado nos dados sensoriais obtidos durante a navegação [BOT94]. Em 			mapas já existentes o robô sabe a posição dos obstáculos antes de se locomover. Utilizando dados sensoriais ele deve se locomover para 			saber se existe um obstáculo à frente ou não.
+
+	\item O planejamento determina o comportamento do robô para encontrar um caminho até o alvo desviando de obstáculos.
+
+	\item A execução do planejamento é fazer com que o robô alcance o alvo a partir do que foi estipulado pela etapa do planejamento. 
+		Sendo assim as técnicas de controle de navegação são de grande importância, na medida que estas determinam o grau de autonomia, eficiência 			e inteligência do robô. As técnicas de controle de navegação são separadas de acordo com requisitos que estas utilizam, tais como: 			conhecimento anterior do ambiente, capacidade de aprendizagem, tipo de sensores utilizados, entre outros. Existem duas abordagens distintas 			no uso de técnicas de controle de navegação: planejamento de caminho (path planning) baseado em locais conhecidos e navegação baseada em 			sensores [SCH99].
+\end{enumerate}
+
+
+
+
+
+
+
+
+
+
+\chapter{Conclusão}
+
+
+\bibliography{ModeloTCC}
+\bibliographystyle{abnt}
+
+\end{document}

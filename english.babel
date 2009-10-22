@@ -1,0 +1,60 @@
+%
+% definições para textos em inglês
+%
+\@namedef{captionsenglish}{%
+	\def\bibname{References}%
+	\def\abstractname{Abstract}%
+	\def\appendixname{Appendix}%
+	\def\contentsname{Contents}%
+	\def\listfigurename{List of Figures}%
+	\def\listtablename{List of Tables}%
+	\def\figurename{Figure}%
+	\def\tablename{Table}%
+	\def\advisorname{Advisor}%
+	\def\coadvisorname{Coadvisor}%
+	\def\listabbrvname{List of Abbreviations and Acronyms}%
+	\def\listsymbolname{List of Symbols}%
+	\def\annexname{Annex}%
+	\def\keywordsname{Keywords}%
+	\def\cipcaption{CIP -- CATALOGING-IN-PUBLICATION}%
+	\def\byname{by}%
+	\def\dissname{Thesis (Master)}%
+	\def\dissspecificinfo{%
+		Thesis presented in partial fulfillment\\
+		of the requirements for the degree of\\
+		Master of Computer Science
+	}%
+	\def\tesename{Thesis (Ph.D.)}%
+	\def\tesespecificinfo{%
+		Thesis presented in partial fulfillment\\
+		of the requirements for the degree of\\
+		Doctor of Computer Science
+	}%
+	\def\planodoutoradospecificinfo{PhD Work Plan}%
+	\def\proptesename{Ph.D. Thesis Proposal}%
+	\def\proptesespecificinfo{Ph.D. Thesis Proposal}%
+	\def\tcname{Final Report (Master)}%
+	\def\tcspecificinfo{%
+		Final Report presented in partial fulfillment\\
+		of the requirements for the degree of\\
+		Master of Informatics
+	}%
+	\def\rpname{Research Report}%
+	\def\financname{Supporting Agencies}%
+	\def\especname{Monography (specialization)}%
+	\def\especspecificinfo{%
+		Monography presented in partial fulfillment
+		of the requirements for the degree of Especialista
+	}%
+	\def\coordname{Course Coordinator}%
+}
+\@namedef{dateenglish}{%
+	\def\monthname{%
+		\ifcase\month\or%
+			January\or February\or March\or April\or%
+			May\or June\or July\or August\or September\or%
+			October\or November\or December%
+		\fi%
+	}%
+	\def\ii@date{\@publmonth~\@publyear}%
+}
