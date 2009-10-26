@@ -1,0 +1,327 @@
+\chapter{Bioinformática}
+
+A bioinformática é uma ciência aplicada que surgiu do casamento da biologia e da informática, e hoje é denominada como a ciência de usar as informações para entender a biologia. Também se pode dizer que a bioinformática é um subconjunto de um campo maior da biologia computacional, que visa à aplicação de técnicas analíticas quantitativas à modelagem de sistemas biológicos \cite{Gibas:l01, Lesk:l08}.
+
+A pesquisa em bioinformática e biologia computacional pode compreender desde a abstração das propriedades de um sistema biológico em um modelo matemático ou físico até a implementação de novos algoritmos para a análise de dados, o desenvolvimento de bancos de dados e das ferramentas \emph{web} para acessá-los \cite{Gibas:l01, Lesk:l08}.
+
+Nas seções que seguem será explicado o papel das proteínas e como elas funcionam, o dogma central da biologia molecular, ou seja, o processo pelo qual o DNA se replica ou é transcrito em RNA, e por sua vez o RNA é traduzido em proteínas, e serão apresentados brevemente os principais bancos de dados biológicos.
+
+\section{Proteínas}
+
+O papel das proteínas e dos ácidos nucléicos está diretamente relacionado ao controle de tudo o que a célula é e o que ela faz. As proteínas são componentes obrigatórios dos seres vivos, aparecendo até nos vírus, que não tem estrutura celular. As proteínas desempenham três papéis fundamentais: a construção da matéria viva, reposição de material celular desgastado e crescimento são funções que dependem da fabricação de proteínas pelos ribossomos da célula; a regulação do metabolismo celular, função desempenhada pelas enzimas e sem as quais as reações químicas numa célula não seriam possíveis; e defesa do organismo das invasões de agentes externos, desempenhada pelos anticorpos \cite{Junior:l03}.
+
+\pagebreak
+
+Nas subseções que seguem será explicado o que é e como funcionam os aminoácidos, as unidades de construção da proteína, a estrutura da proteína e a relação entre forma e função nas proteínas.
+
+\subsection{Aminoácidos: as unidades de construção da proteína}
+
+As proteínas são moléculas grandes e de estrutura complexa. Uma molécula de proteína é constituída por muitas unidades menores, ligadas entre si, os aminoácidos. Qualquer molécula de aminoácido tem um grupo ácido carboxílico ($ -COOH $) e um grupo amina ($ -NH_{2} $) ligados a um átomo de carbono. A esse carbono ficam ligados um átomo de hidrogênio e um radical ($ R $). Como pode ser visto na Figura \ref{fgr:AminoacidosRadicais} o radical pode ser um simples átomo de hidrogênio (na glicina), um $ -CH_{3} $ (na alanina), ou grupos mais complexos como nos outros. Os vinte aminoácidos existentes na natureza diferem entre si apenas quanto ao seu radical \cite{Berg:l04, Junior:l03}.
+
+\begin{figure}[htp]
+	\centering
+	\includegraphics[scale=.2]{imgs/AminoacidosRadicais}
+	\caption{Aminoácidos e seus radicais}
+	Fonte: \cite{Junior:l03}
+	\label{fgr:AminoacidosRadicais}
+\end{figure}
+
+Pode-se dividir os aminoácidos em dois tipos: os naturais e os essenciais. Os aminoácidos naturais são os que um organismo animal é capaz de produzir. Os aminoácidos essenciais são aqueles que os animais precisam ingerir, já que são obrigatórios para a síntese de suas proteínas e para sua sobrevivência. Os vegetais são capazes de produzir os vinte aminoácidos necessários conhecidos à produção de suas proteínas \cite{Junior:l03}.
+
+Dois aminoácidos se unem na mólecula de proteína através de uma ligação peptídica. Como ilustra a Figura \ref{fgr:LigacaoPeptidica} a reação ocorre entre a carboxila de um aminoácido e a amina de outro, havendo perda de uma molécula de água, trata-se de uma síntese por desidratação. O produto formado quando dois aminoácidos se ligam é chamado de dipeptídeo, o tripeptídeo e o tetrapeptídeo são formados, respectivamente, por três e quatro aminoácidos \cite{Nelson:l06}.
+
+Quando ocorre um número maior de aminoácidos na molécula, usa-se o termo polipeptídeo, o termo proteína é usado para designar peptídeos com número superior a setenta aminoácidos \cite{Junior:l03, Nelson:l06}.
+
+\begin{figure}[htp]
+	\centering
+	\includegraphics[scale=.2]{imgs/LigacaoPeptidica}
+	\caption{Esquema de formação de um dipeptídeo}
+	Fonte: \cite{Junior:l03}
+	\label{fgr:LigacaoPeptidica}
+\end{figure}
+
+Os aminoácidos são blocos formadores de proteínas e tecido muscular. Todos os tipos de processo fisiológicos como energia, recuperação, ganhos de músculos, força e perda de gordura, assim como funções do cérebro e temperamento, estão inteiramente ligados aos aminoácidos. Eles também podem ser convertidos e enviados diretamente para o ciclo de produção de energia do músculo \cite{Motta:l05, Nelson:l06}.
+
+São 20 os aminoácidos construtores moleculares de proteínas. De acordo com uma classificação aceita, nove são chamados de aminoácidos essenciais, significando que são fornecidos por algum alimento ou fonte de suprimento. E os demais, chamados aminoácidos dispensáveis ou condicionalmente indispensáveis, são baseado na habilidade do organismo em sintetizá-los de outros aminoácidos \cite{Champe:l06}. Nas Tabelas \ref{tbl:AminoacidosEssenciais1} e \ref{tbl:AminoacidosEssenciais2} são apresentados os aminoácidos essenciais, com a sua abreviatura e função.
+
+\begin{table}[ht]
+	\centering
+	\includegraphics[width=1\textwidth]{imgs/AminoacidosEssenciais1}
+	\caption{Aminoácidos essenciais (1/2)}
+	\label{tbl:AminoacidosEssenciais1}
+\end{table}
+
+\begin{table}[ht]
+	\centering
+	\includegraphics[width=1\textwidth]{imgs/AminoacidosEssenciais2}
+	\caption{Aminoácidos essenciais (2/2)}
+	\label{tbl:AminoacidosEssenciais2}
+\end{table}
+
+Logo após, nas Tabelas \ref{tbl:AminoacidosDispensaveis1} e \ref{tbl:AminoacidosDispensaveis2} são apresentados os aminoácidos dispensáveis, com a sua abreviatura e função. E, por fim, na Tabela \ref{tbl:AminoacidosCondicionalmenteIndispensaveis} são apresentados os aminoácidos condicionalmente indispensáveis, com a sua abreviatura e função.
+
+\begin{table}[htp]
+	\centering
+	\includegraphics[width=1\textwidth]{imgs/AminoacidosDispensaveis1}
+	\caption{Aminoácidos dispensáveis (1/2)}
+	\label{tbl:AminoacidosDispensaveis1}
+\end{table}
+
+\begin{table}[htp]
+	\centering
+	\includegraphics[width=1\textwidth]{imgs/AminoacidosDispensaveis2}
+	\caption{Aminoácidos dispensáveis (2/2)}
+	\label{tbl:AminoacidosDispensaveis2}
+\end{table}
+
+\begin{table}[htp]
+	\centering
+	\includegraphics[width=1\textwidth]{imgs/AminoacidosCondicionalmenteIndispensaveis}
+	\caption{Aminoácidos condicionalmente indispensáveis}
+	\label{tbl:AminoacidosCondicionalmenteIndispensaveis}
+\end{table}
+
+\subsection{A estrutura da proteína}
+
+As proteínas são constituídas por apenas vinte tipos de aminoácidos conhecidos, mesmo assim, o número de tipos de proteínas existentes na natureza é extremamente grande. Além do número de aminoácidos variar de setenta a alguns milhares, as diferentes seqüências que esses aminoácidos podem formar são praticamente infinitas \cite{Berg:l04, Junior:l03}.
+
+\pagebreak
+
+As proteínas podem ser estudadas sobre dois enfoques, a constituição do fio protéico e a forma da molécula. A constituição do fio protéico trata dos tipos de aminoácidos que compõem a proteína, ou seja, quando estuda-se uma proteína quanto aos tipos de aminoácidos que fazem parte dela e quanto à seqüência em que estão ordenados, se esta analisando sua estrutura primária. A seqüência exata dos aminoácidos numa proteína é extremamente importante para o desempenho de sua função, quando a célula, por motivos hereditários, comete enganos trocando um aminoácido por outro na seqüência de uma proteína, pode alterar totalmente o funcionamento da proteína, causando doenças sérias ou a proteína fica sem função e desaparece \cite{Junior:l03, Nelson:l06}.
+
+A forma da molécula trata de como a cadeia de aminoácidos se torce, já que as proteínas não são fios esticados, formando uma hélice, como um fio de telefone. Esse enovelamento na forma de uma hélice representa o que os químicos chamam de estrutura secundária. E a própria hélice se torce sobre si mesma, adquirindo uma forma espacial arredondada. A forma definitiva da proteína é determinada pelo modo como a hélice se dobra e é chamada de estrutura terciária. Por razões químicas, a estrutura terciária depende da seqüência de aminoácidos, assim, proteínas com seqüências diferentes têm formas ou estruturas terciárias também diferentes \cite{Berg:l04, Junior:l03}. A Figura \ref{fgr:EstruturaProteina} mostra as diferentes estruturas da proteína.
+
+\begin{figure}[htp]
+	\centering
+	\includegraphics[scale=.5]{imgs/EstruturaProteina}
+	\caption{Estrutura da proteína}
+	Fonte: \cite{Nelson:l06}
+	\label{fgr:EstruturaProteina}
+\end{figure}
+
+\subsection{Proteínas: relação entre forma e função}
+
+Em muitas proteínas, a forma determina seu papel biológico, ou seja, proteínas diferentes, tendo formas diferentes, apresentam atividade biológica diferente. Quando uma proteína é submetida a certos tratamentos químicos, ou então a temperaturas elevadas, ela se altera muitas vezes de forma permanente, o que é chamado de desnaturação \cite{Junior:l03, Nelson:l06}.
+
+Isso ocorre quando o tratamento empregado rompe certas ligações químicas que mantinham a forma da molécula e quando as proteínas celulares se deformam, elas perdem a capacidade de desempenhar suas funções \cite{Junior:l03}.
+
+\section{O dogma central da biologia molecular}
+
+O dogma central da biologia estabelece que o DNA atua como um modelo para se replicar, ele também é transcrito no RNA e o RNA é traduzido em proteína, conforme ilustra a Figura \ref{fgr:DuplicacaoTranscricaoTraducao} \cite{Gibas:l01}.
+
+\begin{figure}[htp]
+	\centering
+	\includegraphics[scale=.19]{imgs/DuplicacaoTranscricaoTraducao}
+	\caption{Duplicação, transcrição e tradução}
+	Fonte: \cite{Junior:l03}
+	\label{fgr:DuplicacaoTranscricaoTraducao}
+\end{figure}
+
+A informação genética é conservada e passada para os descendentes por meio do processo de replicação, e essas informações genéticas também são usadas pelo organismo individual por meio de processos de transcrição e tradução \cite{Gibas:l01, Nelson:l06}.
+
+O DNA genômico contém o plano mestre de um ser vivo e, sem ele, os organismos não seriam capazes de se auto-replicarem. A seqüência de DNA ``unidimensional'' é só informação, que é lida pelo sistema de síntese da proteína da célula \cite{Gibas:l01, Nelson:l06}.
+
+\subsection{A estrutura do DNA e do RNA}
+
+O DNA e o RNA são macromoléculas constituídas por centenas ou milhares de nucleotídeos ligados entre si. Cada nucleotídeo é sempre composto por três partes: um grupo fosfato (um açúcar do grupo das pentoses), a desoxirribose (no caso do DNA) e uma base nitrogenada \cite{Junior:l03, Zaha:l01}. A Figura \ref{fgr:NucleotideosDNA} ilustra essa ligação para os quatro diferentes tipos de nucleotídeos.
+
+\begin{figure}[htp]
+	\centering
+	\includegraphics[scale=.18]{imgs/NucleotideosDNA}
+	\caption{Nucleotídeos do DNA}
+	Fonte: \cite{Junior:l03}
+	\label{fgr:NucleotideosDNA}
+\end{figure}
+
+As bases nitrogenadas podem ser púricas, adenina e guanina ou pirimídicas, citosina e timina, a base uracila, também pirimídica, é encontrada somente no RNA. As bases púricas, maiores, são constituídas de um anel duplo de carbono e nitrogênio, enquanto que as pirimídicas, menores, são compostas por um anel simples \cite{Berg:l04, Junior:l03, Zaha:l01}.
+
+A molécula de DNA é constituída por duas cadeias de nucleotídeos e em cada cadeia, os nucleotídeos estão ligados uns aos outros pelos fosfatos. Na molécula de DNA, as duas cadeias de nucleotídeos estão ligadas uma à outra pelas suas bases nitrogenadas, por meio de pontes de hidrogênio. Por motivos de configuração molecular, a ligação ocorre entre pares de bases específicas, assim, a adenina liga-se a timina, e a citosina liga-se à guanina. A molécula de DNA assemelha-se, então, a uma escada de corda: nela, fosfatos e pentoses representam os corrimãos, enquanto os degraus da escada são representados pelos pares de base \cite{Junior:l03, Paris:m08}. A Figura \ref{fgr:MoleculaDNA} ilustra o esquema de molécula de DNA.
+
+\begin{figure}[htp]
+	\centering
+	\includegraphics[scale=.23]{imgs/MoleculaDNA}
+	\caption{Esquema de molécula de DNA}
+	Fonte: \cite{Junior:l03}
+	\label{fgr:MoleculaDNA}
+\end{figure}
+
+As estruturas do DNA e do RNA se diferem em três aspectos: enquanto o DNA é formado por duas cadeias de nucleotídeos, o RNA é formado por uma fita única; a pentose no RNA é sempre a ribose (no DNA é a desoxirribose); e a uracila é exclusiva do RNA, da mesma forma que a timina caracteriza o DNA \cite{Berg:l04, Junior:l03, Zaha:l01}. A Figura \ref{fgr:MoleculaRNA} ilustra o esquema de molécula de RNA.
+
+\begin{figure}[htp]
+	\centering
+	\includegraphics[scale=.23]{imgs/MoleculaRNA}
+	\caption{Esquema de molécula de RNA}
+	Fonte: \cite{Junior:l03}
+	\label{fgr:MoleculaRNA}
+\end{figure}
+
+\subsection{Replicação de DNA}
+
+A especificidade do pareamento das bases sugere que cada uma das fitas parentais separadas pode atuar como molde para a síntese de uma fita-filha complementar \cite{Gibas:l01, Lewin:l01}. Isso é demostrado na Figura \ref{fgr:DuplicacaoDNA01} e o seu funcionamento ocorre da seguinte forma:
+
+\begin{figure}[htp]
+	\centering
+	\includegraphics[scale=.2]{imgs/DuplicacaoDNA01}
+	\caption{Esquema de duplicação de DNA}
+	Fonte: \cite{Junior:l03}
+	\label{fgr:DuplicacaoDNA01}
+\end{figure}
+
+\begin{enumerate}
+	\item[a)] Nessa etapa tem-se, duas fitas complementares de DNA em que as bases nitrogenadas estão ligadas por pontes de hidrogênio. Os ``corrimãos'' laterais são formados por fosfato e desoxiribose intercalados \cite{Junior:l03, Nelson:l06};
+	\item[b)] No primeiro passo da duplicação, ou replicação, as pontes de hidrogênio que ligam as bases nitrogenadas se rompem, e as duas fitas se separam \cite{Junior:l03, Zaha:l01};
+	\item[c)] Cada uma das fitas originais (azul-escuro) serve de ``molde'' para a produção de fitas novas (azul-claro), que são formadas por nucleotídeos de DNA livres, que já estavam presentes na célula. Os nucleotídeos novos também se ligam entre si, formando um novo ``corrimão'', com açucar e fosfato alternados \cite{Gibas:l01, Junior:l03};
+	\item[d)] Nessa etapa temos duas moléculas de DNA idênticas quanto a seqüência de pares de bases, de ``degraus''. Cada molécula, agora, tem uma fita velha (azul-escuro), que pertenceu à molécula original, e uma fita nova (azul-claro), recém-formada \cite{Junior:l03}.
+\end{enumerate}
+
+Para a duplicação acontecer, são necessárias várias enzimas, uma delas, a helicase que separa as duas hélices, uma outra, a DNA polimerase que permite a ligação de nucleotídeos novos ao molde de DNA \cite{Junior:l03}.
+
+Esse processo de duplicação em que cada molécula-filha conservou a metade da molécula-mãe, também é chamado de duplicação semiconservativa \cite{Junior:l03, Lewin:l01, Nelson:l06}. A Figura \ref{fgr:DuplicacaoDNA02} ilustra em três dimensões o processo de duplicação do DNA.
+
+\begin{figure}[htp]
+	\centering
+	\includegraphics[scale=.2]{imgs/DuplicacaoDNA02}
+	\caption{Duplicação do DNA}
+	Fonte: \cite{Junior:l03}
+	\label{fgr:DuplicacaoDNA02}
+\end{figure}
+
+\subsection{Transcrição de DNA}
+
+O DNA não atua somente como um modelo para fazer cópias de si mesmo, mas também como modelo para uma molécula chamada ácido ribonucléico (RNA) \cite{Gibas:l01, Lesk:l08, Nelson:l06}.
+
+Enquanto a duplicação, ou replicação, é uma propriedade que permite a transmissão da informação genética às células-filhas, a produção de RNA relaciona-se à síntese de proteínas, no citoplasma \cite{Junior:l03}. Isso é demostrado na Figura \ref{fgr:TranscricaoDNAtoRNA01} e o seu funcionamento ocorre da seguinte forma:
+
+\begin{figure}[htp]
+	\centering
+	\includegraphics[scale=.2]{imgs/TranscricaoRNA01}
+	\caption{Esquema de transcrição de RNA}
+	Fonte: \cite{Junior:l03}
+	\label{fgr:TranscricaoDNAtoRNA01}
+\end{figure}
+
+\begin{enumerate}
+	\item[a)] Nessa etapa temos um trecho de molécula de DNA, constituído por duas fitas complementares, cujas bases estão ligadas entre si por pontes de hidrogênio \cite{Junior:l03}.
+	\item[b)] No primeiro passo da síntese de RNA, as pontes de hidrogênio se rompem e as duas fitas se afastam uma da outra \cite{Junior:l03}. \pagebreak
+	\item[c)] Apenas uma das fitas de DNA funciona como ``molde''. Nela, encaixam-se nucleotídeos de RNA já existente na célula (em vermelho), que têm a ribose como açúcar. Repare que, na adenina do DNA, encaixa-se um nucleotídeo com a base uracila, exclusiva do RNA, em vez de timina, exclusiva do DNA. Os demais tipos de encaixe são semelhantes aos que ocorrem na replicação do DNA. Enquanto isso, a segunda fita de DNA permanece inativa \cite{Junior:l03, Nelson:l06}.
+	\item[d)] Uma vez produzida, a fita de RNA se destaca do ``molde'' de DNA e irá migrar, mais tarde, para o citoplasma. Por fim, as duas fitas de DNA voltam a parear \cite{Junior:l03, Nelson:l06}.
+\end{enumerate}
+
+A molécula de RNA é uma fita simples e a informação para que ela seja produzida está contida apenas numa das fitas do DNA, e não nas duas. Para o processo ocorrer, é necessária uma enzima especial chamada de RNA polimerase, que, além de afastar as fitas de DNA, permite o encaixe dos nucleotídeos de RNA \cite{Junior:l03}. A Figura \ref{fgr:TranscricaoDNAtoRNA02} ilustra em três dimensões o processo de transcrição do DNA em RNA.
+
+\begin{figure}[htp]
+	\centering
+	\includegraphics[scale=.2]{imgs/TranscricaoRNA02}
+	\caption{Transcrição de DNA em RNA}
+	Fonte: \cite{Junior:l03}
+	\label{fgr:TranscricaoDNAtoRNA02}
+\end{figure}
+
+O genoma fornece um modelo para a síntese de uma variedade de moléculas de RNA, as três principais são o RNA mensageiro, o RNA transportador e o RNA ribossômico \cite{Gibas:l01, Lesk:l08}. 
+
+As moléculas de RNA mensageiro (mRNA) são transcritas do RNA dos genes, elas levam informações do genoma para o ribossomo, a maquinária de síntese protéica da célula. As moléculas de RNA transportador (tRNA) são moléculas de RNA não traduzidas que transportam aminoácidos, os blocos de construção das proteínas, para os ribossomos. Finalmente, as moléculas de RNA ribossômico (rRNA) são os componentes de RNA não traduzido dos ribossomos, que são complexos de proteínas e RNA. Os rRNA estão envolvidos na fixação das moléculas de mRNA e na catálise de algumas etapas no processo de tradução \cite{Gibas:l01}.
+
+\subsection{Tradução de mRNA}
+
+A tradução do mRNA em proteína é a etapa final na colocação das informações contidas no genoma em funcionamento na célula. Como o DNA, as proteínas são polímeros lineares criados de um alfabeto de unidades quimicamente variáveis, o alfabeto das proteínas é um conjunto de pequenas moléculas denominadas aminoácidos \cite{Gibas:l01, Lesk:l08}.
+
+Ao contrário do DNA, a seqüência química de uma proteína tem uma composição físico-químico, assim como um conteúdo informativo. Cada um dos 20 aminoácidos encontrados com mais freqüência nas proteínas tem uma natureza química diferente, determinada por sua cadeia lateral (um grupo químico que varia de aminoácido para aminoácido). A seqüência química da proteína se chama estrutura primária, mas a maneira pela qual a seqüência se dobra para formar uma molécula compacta é tão importante para a função da proteína como é sua estrutura primária. Os elementos das estruturas secundária e terciária que compõem a dobra final da proteína podem juntar partes distantes da seqüência química da proteína para formar sítios funcionais \cite{Gibas:l01, Nelson:l06}.
+
+À correspondência entre trincas de bases do DNA, trincas de bases do RNA e aminoácidos chamamos de código genético. Cada trinca de bases no DNA ou RNA é denominada códon, essas trincas representam ``palavras'' do código genético e cada ``palavra'' corresponde a um ``objeto'', o aminoácido \cite{Junior:l03, Nelson:l06}.
+
+Como mostra a Tabela \ref{fgr:CodigoGenetico}, o código genético é o código que converte o DNA em proteína. Ele utiliza três bases de DNA (códons) para codificar cada aminoácido em uma seqüência de proteína. As combinações simples informam que há 64 maneiras de selecionar 3 nucleotídeos de um conjunto de 4, portanto, há 64 códons possíveis e somente 20 aminoácidos \cite{Lesk:l08}.
+
+Alguns códons são redundantes, outros têm a função especial de informar ao mecanismo de tradução da célula para parar de converter uma molécula de mRNA \cite{Gibas:l01}. A Figura \ref{fgr:CorrespondenciaEntreUnidade} mostra a correspondência entre as unidades de DNA e do RNA e os aminoácidos da proteína a ser sintetizada.
+
+\begin{table}[htp]
+	\centering
+	\includegraphics[scale=.85]{imgs/CodigoGenetico}
+	\caption{Código genético}
+	Fonte: \cite{Gibas:l01}
+	\label{fgr:CodigoGenetico}
+\end{table}
+
+\begin{figure}[htp]
+	\centering
+	\includegraphics[scale=.23]{imgs/CorrespondenciaEntreUnidade}
+	\caption{Correspondência entre DNA, RNA e Aminoácidos}
+	Fonte: \cite{Junior:l03}
+	\label{fgr:CorrespondenciaEntreUnidade}
+\end{figure}
+
+\subsection{Síntese de proteínas}
+
+Na Figura \ref{fgr:SinteseProteica} os aminoácidos foram representados em vermelho, como bolinhas, triângulos, etc., para melhor ilustrar a explicação.
+
+\begin{figure}[htp]
+	\centering
+	\includegraphics[scale=.23]{imgs/SinteseProteica}
+	\caption{Síntese protéica}
+	Fonte: \cite{Junior:l03}
+	\label{fgr:SinteseProteica}
+\end{figure}
+
+O ribossomo do esquema A (azul) desliza ao longo da fita de mRNA, movendo-se da esquerda para direita, no momento ele abrange dois códons do mRNA. O tRNA com o anticódon UGG (1) está ligado à cadeia de aminoácidos, o segundo tRNA com o anticódon UUU (2), encaixa-se no códon AAA (2) do mRNA e está trazendo o aminoácido ``quadradinho''. Entre os aminoácidos ``bolinha'', o último da cadeia a ser fabricado, e ``quadradinho'', que acaba de ser trazido, vai se formar uma ligação peptídica \cite{Junior:l03, Nelson:l06}.
+
+No esquema B é exemplificado o que ocorre na seqüência, a ligação peptídica entre os aminoácidos completou-se, e a cadeia polipeptídica foi acrescida de um aminoácido. O tRNA com o anticódon UGG (4) então desliga-se da cadeia de aminoácidos e volta para o citoplasma, podendo buscar um novo aminoácido ``bolinha''. A proteína em formação está ligada agora ao tRNA com o anticódon UUU (5), o ribossomo deslizou para a direita, abrangendo um novo códon do mRNA, GUA (6). O tRNA com o anticódon CAU (6), o único que pode se encaixar, está trazendo o aminoácido ``losango''. Logo haverá ligação peptídica entre ``quadrinho'' e ``losango'' e o penúltimo tRNA, UUU (5), se desligará, o ribossomo deslizará para a direita, abrangendo mais um códon, e assim por diante \cite{Junior:l03}.
+
+A cada códon que o ribossomo abrange, é acrescentado um aminoácido específico à proteína em crescimento, quando o ribossomo tiver percorrido todo o mRNA, toda a mensagem terá sido lida e a proteína estará pronta. Então o ribossomo se desliga do mRNA. A mesma fita de RNA pode ser lida por vários ribossomos e cada um deles produzirá uma molécula de proteína exatamente igual \cite{Junior:l03, Nelson:l06}.
+
+\subsection{Genomas e genes}
+
+A seqüência completa de DNA que codifica um ser vivo é chamada de genoma, mas o genoma não funciona como uma seqüência longa, ele é dividido em genes individuais \cite{Gibas:l01}. Um gene é uma seqüência de DNA necessária para a síntese de uma proteína, porém existem ao longo dos cromossomos algumas seqüências de DNA especializadas capazes de transcrever, mas que não contêm informação para a síntese de proteína \cite{Junior:l03}.
+
+Existem três tipos de genes. Os genes codificadores de proteínas são modelos para gerar moléculas de proteínas. Cada proteína codificada pelo genoma é uma máquina química com um propósito distinto no organismo. Os genes especificadores de RNA também são modelos para as máquinas químicas, mas os blocos criadores das máquinas de RNA são diferentes dos que compõem a proteína. E, por fim, os introns (genes não transcritos) são regiões do DNA genômico que possuem algum propósito funcional, mas não alcançam esse propósito, sendo transcritos ou convertidos para criar outra molécula \cite{Gibas:l01, Lesk:l08}.
+
+\subsection{Evolução molecular}
+
+Os erros na replicação e transcrição de DNA são relativamente comuns. Se esses erros ocorrem nas células reprodutoras de um organismo, eles podem ser transmitidos aos seus descendentes. As alterações na seqüência de DNA são conhecidas como mutações, e essas mutações podem ter resultados prejudiciais, resultados que diminuem a probabilidade de sobrevivência dos descendentes até a idade adulta, resultados benéficos ou ser neutras. Se uma mutação não mata o organismo antes que ele se reproduza, a mutação pode se fixar na população depois de muitas gerações, a lenta acumulação dessas mudanças é responsável pelo processo conhecido como evolução \cite{Gibas:l01, Junior:l03}.
+
+O acesso as seqüências de DNA permite o acesso a um melhor entendimento da evolução. Nosso entendimento do mecanismo de evolução molecular como um processo gradual de acumulação de mutações de seqüências de DNA é a justificativa para o desenvolvimento de hipóteses baseadas na comparação das seqüências de DNA e de proteínas \cite{Gibas:l01}.
+
+\section{Bancos de dados biológicos}
+
+Nas subseções que seguem será comentada um pouco da história e qual a função de alguns dos principais bancos de dados biológicos existentes.
+
+\subsection{DDBJ}
+
+O DDBJ\footnote{DDBJ - DNA Data Bank of Japan. Disponível em: $<$\url{http://www.ddbj.nig.ac.jp}$>$. Acesso em: 14 de maio de 2009} (\emph{DNA Data Bank of Japan}) iniciou suas atividades em banco de dados de DNA em 1986 no \emph{National Institute of Genetics} (NIG), com o aval do Ministério da Educação, Ciência, Esporte e Cultura. Desde o início, o DDBJ tem funcionado com uma das bases de dados internacional de DNA, que inclui EBI (\emph{European Bioinformatics Institute}, responsável pela base de dados EMBL) na Europa e NCBI (\emph{National Center for Biotechnology Information}, responsável pela base de dados GenBank) nos Estados Unidos da América como os dois outros membros. Conseqüentemente o DDBJ tem colaborado com os outros dois bancos de dados através do intercâmbio de dados e informações pela Internet e pela sua regular participação nas duas reuniões, a \emph{International DNA Data Banks Advisory Meeting} e a \emph{International DNA Data Banks Collaborative Meeting}.
+
+O \emph{Center for Information Biology} no NIG foi reorganizado como o \emph{Center for Information Biology and DNA Data Bank of Japan} (CIB-DDBJ) em 2001. O novo centro desempenha um papel importante na realização de projetos de investigação em informações biológicas. O DDBJ é o único banco de dados de DNA no Japão que é oficialmente certificado para recolher seqüências de DNA de pesquisadores, e de emitir o número reconhecido internacionalmente para adesão dos dados fornecidos. O DDBJ coleta dados principalmente de pesquisadores japoneses, mas evidentemente também aceita dados e emiti o número de adesão aos investigadores em todos os outros países. A troca de dados coletados entre a EMBL, EBI e GenBank, NCBI em uma base diária, proporciona que o os três bancos partilhem de praticamente os mesmos dados em um determinado momento. O CIB-DDBJ também fornece muitas ferramentas para a recuperação de dados e análises desenvolvidas através do DDBJ.
+
+\subsection{EMBL-EBI}
+
+O EBI\footnote{EMBL-EBI. Disponível em: $<$\url{http://www.ebi.ac.uk}$>$. Acesso em: 30 de abril de 2009} (\emph{European Bioinformatics Institute}) é parte integrante do EMBL (\emph{European Molecular Biology Laboratory}). O EMBL-EBI foi o primeiro banco de dados do mundo de seqüência nucleotídica tendo surgido em 1980 em Heidelberg, na Alemanha. O que começou com uma modesta tarefa de abstrair informações da literatura, logo se tornou uma importante base de dados com necessidade de pessoal altamente qualificado em informática com o início do projeto genoma. Seus grupos de investigação visam compreender a biologia através do desenvolvimento de novas abordagens para a interpretação dos dados biológicos.
+
+\subsection{GenBank}
+
+O GenBank\footnote{GenBank at NCBI. Disponível em: $<$\url{http://www.ncbi.nlm.nih.gov/Genbank}$>$. Acesso em: 14 de maio de 2009} é um banco de dados de seqüências genéticas e uma coleção de todas as anotações de seqüências de DNA disponíveis. Essa base contém aproximadamente 85.759.586.764 bases em 82.853.685 registros de seqüências. Os lançamentos de novas versões são feitos a cada dois meses. O GenBank é parte do \emph{International Nucleotide Sequence Database Collaboration}, que inclui o {DNA DataBank} do Japão (DDBJ), o \emph{European Molecular Biology Laboratory} (EMBL) e o GenBank do NCBI.
+
+A base de dados do GenBank é projetada para proporcionar e incentivar o acesso pela comunidade científica a mais atualizada e completa seqüência de informações de DNA.
+O NCBI está continuamente desenvolvendo novas ferramentas e atualizando as já existentes para melhorar a apresentação e o acesso ao GenBank. O NCBI não coloca restrições à utilização ou distribuição dos dados do GenBank.
+
+\subsection{OMIM}
+
+OMIM\footnote{OMIM - Online Mendelian Inheritance in Man. Disponível em: $<$\url{http://www.ncbi.nlm.nih.gov/omim}$>$. Acesso em: 24 de abril de 2009} (\emph{Online Mendelian Inheritance in Man}) é um catálogo de atualização contínua de genes humanos e doenças genéticas (que é o seu principal foco), com \emph{links} para literaturas de referência, seqüências de registros, mapas, dados e afins. OMIM está baseado no texto \emph{Mendelian Inheritance in Man}, de autoria do Dr. Victor A. McKusick e uma equipe de redatores e editores científicos no John Hopkins University e da população.
+
+Esta base de dados foi iniciada no início dos anos de 1960 pelo Dr. Victor A. McKusick com um catálogo de traços mendelianos e transtornos, intitulado \emph{Mendelian Inheritance in Man} (MIM). Doze edições do livro foram publicadas entre 1966 e 1998. A versão online, OMIM, foi criada em 1985 por uma colaboração entre a \emph{National Library of Medicine} e o \emph{William H. Welch Medical Library} em Johns Hopkins e em 1987 foi disponibilizada na Internet. Em 1995, OMIM foi desenvolvido para \emph{World Wide Web} pelo NCBI (\emph{National Center for Biotechnology Information}).
+
+\subsection{PDB}
+
+O PDB\footnote{PDB - Protein Data Bank. Disponível em: $<$\url{http://www.rcsb.org/pdb/home/home.do}$>$. Acesso em: 14 de maio de 2009} (\emph{Protein Data Bank}) é o único repositório de informações sobre as estruturas 3D de grandes moléculas biológicas, incluindo proteínas e ácidos nucléicos. Compreender a forma de uma molécula ajuda a compreender como ela funciona, esse conhecimento pode ser usado para ajudar a deduzir o seu papel na estrutura da saúde humana e doença, e desenvolvimento de drogas.
+
+O PDB foi criado em 1971 no \emph{Brookhaven National Laboratory} e inicialmente continha sete estruturas. Em 1998, o \emph{Research Collaboratory for Structural Bioinformatics} (RCSB) ficou responsável pela gestão do PDB. Em 2003, o wwPDB foi formado para manter um único arquivo do PDB de estruturas de dados macromoleculares que é livre e publicamente disponíveis para a comunidade global. O wwPDB é constituído por organizações que atuam como deposição, processamento de dados e centros de distribuição para os dados PDB. Além disso, o RCSB PDB suporta um \emph{site} onde os visitantes podem realizar consultas simples e complexas sobre os dados, analisar e visualizar os resultados. O RCSB PDB está localizado na Rutgers, \emph{The State University of New Jersey} e na \emph{University of California}, San Diego.
+
+O RCSB PDB é um membro da wwPDB, um esforço de colaboração com PDBe (Reino Unido), PDBj (Japão), e BMRB (E.U.A.) para assegurar que o arquivo PDB seja global e uniforme. O PDB arquivo está disponível sem nenhum custo para os utilizadores e novas estruturas são liberadas semanalmente.
+
+\subsection{STRING}
+
+STRING\footnote{STRING. Disponível em: $<$\url{http://string.embl.de}$>$. Acesso em: 30 de abril de 2009} é uma base de dados em que constam interações de proteínas conhecidas e previsíveis, essas interações podem ser associações diretas (físicas) e indiretas (funcionais) e são provenientes de quatro fontes: contexto genômico, experimentos, coexpressão e conhecimentos prévios.
+
+\subsection{Swiss-Prot}
+
+O Swiss-Prot\footnote{Swiss-Prot. Disponível em: $<$\url{http://www.expasy.ch/sprot}$>$. Acesso em: 14 de maio de 2009} é um banco de dados de seqüência de proteínas que se empenha em oferecer um elevado nível de anotação (como a descrição da função de uma proteína, suas estruturas de domínios, variantes, etc.), um nível mínimo de redundância e um alto nível de integração com outras bases de dados. Esse banco de dados é desenvolvido pelo \emph{Swiss-Prot group} no \emph{Swiss Institute of Bioinformatics} (SIB) e no \emph{European Bioinformatics Institute} (EBI).
+
+\section{Considerações finais}
+
+Nesse capítulo foi explicado a função das proteínas e o dogma central da biologia molecular, também foram apresentados alguns exemplos de repositórios de informações biológicas, quando possível, dando ênfase ao conteúdo que eles disponibilizam. No próximo capítulo será apresentado o fluxo de pesquisa de uma doença gênica, que é o foco desse trabalho, e será feita uma abordagem mais voltada para a área de biologia de sistemas.
