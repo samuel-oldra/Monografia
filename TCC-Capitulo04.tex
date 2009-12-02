@@ -1,0 +1,204 @@
+\chapter{Implementação}
+
+Nesse capítulo serão apresentados o diagrama de arquitetura da aplicação, o diagrama de componentes, trechos dos \emph{scripts} implementados e o \emph{workflow} científico do sistema, sendo esses artefatos desenvolvidos com base em alterações no projeto original. Os \emph{scripts} completos do sistema podem ser vistos no anexo A.
+
+O sistema \emph{web} BioNet facilita o processo dos usuários de bioinformática permitindo que sejam pesquisadas redes de interação de proteínas a partir de doenças gênicas, isso sem que seja necessário o uso direto das páginas \emph{web} do OMIM e do STRING. O sistema se encarrega de fazer a comunicação com esses \emph{sites} e ainda permite acompanhar todo o processo que está sendo realizado através de sua interface, podendo o usuário inclusive salvar e depois recuperar o processo executado.
+
+\section{Diagrama de arquitetura da aplicação}
+
+Como já havia sido descrito na subseção \ref{ssec:ArquiteturaAplicacao} do capítulo \ref{cap:PropostaSoftware}, a arquitetura do sistema continuou sendo enxuta, porém foi feita uma mudança na qual não é mais necessária a existência de um SGBD (Sistema Gerenciador de Banco de Dados). Como se constatou que os dados a serem armazenados são somente os passos executados, optou-se por permitir que o sistema salve e recupere esses dados a partir de um arquivo XML (\emph{Extensible Markup Language}), podendo o especialista manipular esse arquivo dentro do sistema. A Figura \ref{fgr:ArquiteturaSistema} mostra o diagrama de arquitetura do sistema modificado.
+
+\begin{figure}[htp]
+	\centering
+	\includegraphics[width=.9\textwidth]{imgs/ArquiteturaSistema}
+	\caption{Diagrama de arquitetura da aplicação}
+	\label{fgr:ArquiteturaSistema}
+\end{figure}
+
+\section{Implementação do sistema web}
+
+O diagrama de componentes, mostrado na Figura \ref{fgr:DiagramaComponentes}, visa demonstrar como os componentes do sistema interagem entre si. Nas subseções que seguem será explicado o que faz cada um dos componentes, apresentando alguns trechos de código específicos responsáveis pelas funcionalidades do sistema. A implementação reflete os passos do \emph{workflow} apresentado na subseção \ref{ssec:WorkflowCientifico} do capítulo \ref{cap:PropostaSoftware}.
+
+\begin{figure}[htp]
+	\centering
+	\framebox{\includegraphics[width=.9\textwidth]{imgs/DiagramaComponentes}}
+	\caption{Diagrama de Componentes}
+	\label{fgr:DiagramaComponentes}
+\end{figure}
+
+\subsection{Pesquisa da doença}
+
+O \emph{script} (step01.php) do primeiro componente se resume a um formulário HTML (\emph{HyperText Markup Language}) no qual o usuário digita o nome da doença que deseja encontrar e manda pesquisar.
+
+\subsection{Busca e seleção da doença}
+
+O \emph{script} (step02.php) do segundo componente é responsável por fazer a busca e listar os resultados da pesquisa da doença, possibilitando ao usuário poder escolher a doença que está procurando, conforme projetado no caso de uso da Figura \ref{fgr:CasoDeUso01}.
+
+No \emph{Script} \ref{lst:step02t} o termo pesquisado, anteriormente, é recebido (linha 4), então é informado o endereço do \emph{Web Service} do \emph{site} do OMIM (linhas 5 e 6) e depois ele é instanciado no sistema (linha 7). Após são capturadas as informações do \emph{proxy} (linha 8), é verificado se não houve erros (linha 9), os parâmetros para a função que traz os identificadores das doenças com o termo são informados (linha 11) e então a função é chamada (linha 12). Tendo os identificadores armazenados em uma variável, é feito um \emph{laço} (linha 13) no qual são buscadas algumas informações das doenças. Para isso, os parâmetros para a função que traz os nomes das doenças são informados (linha 14) e a função é chamada (linha 15), após isso temos algumas informações da doença para ajudar o usuário na escolha (linhas 16 a 20).
+
+\singlespace
+\lstset{language=php}
+\lstinputlisting[caption=step02.php (trecho), label=lst:step02t]{codes/step02-trecho.php}
+\onehalfspace
+
+\subsection{Visualização do relatório e seleção das proteínas}
+
+O \emph{script} (step03.php) do terceiro componente é responsável por apresentar o relatório da doença selecionada anteriormente e sugerir proteínas encontradas, conforme projetado no caso de uso da Figura \ref{fgr:CasoDeUso01}.
+
+No \emph{Script} \ref{lst:step03t} o identificador da doença selecionada, anteriormente, é recebido (linha 2) e então é trazido o arquivo HTML da página \emph{web} do \emph{site} do OMIM com o relatório da doença (linhas 3 e 4). Feito isso todo o conteúdo da página HTML, que vem na forma de um vetor, é organizado e colocado em uma variável (linhas 5 e 6). Após é criada uma variável com a expressão regular (linha 7), conforme projetado na subseção \ref{ssec:AlgoritmoExtracaoDados} do capítulo \ref{cap:PropostaSoftware} e que agora aparece melhorada e otimizada para a linguagem PHP, que é responsável por separar do relatório da doença as proteínas, e então a busca é realizada (linha 8).
+
+Então é feito um \emph{laço} (linha 10) para testar todas as proteínas. No primeiro teste (linhas 11 a 14) é verificado se o termo está na lista de proteínas encontradas. No segundo teste (linhas 15 a 18) é verificado se o termo encontrado está na lista de termos a serem retirados (linha 9).
+
+\singlespace
+\lstset{language=php}
+\lstinputlisting[caption=step03.php (trecho), label=lst:step03t]{codes/step03-trecho.php}
+\onehalfspace
+
+\pagebreak
+
+No terceiro é verificado se o termo passou nos dois testes antes de ser adicionado a lista de proteínas encontradas (linhas 19 e 20). Por fim o \emph{script} apresenta a lista de proteínas encontradas e o relatório da doença (linhas 23 e 24).
+
+O segundo teste (linhas 15 a 18) foi necessário devido à função que executa a expressão regular (linha 7) não diferenciar termos em maiúsculas e minúsculas, fazendo com que sejam encontrados termos que não são proteínas, como por exemplo, algumas \emph{tags} HTML e parte do relatório que não são proteínas (linha 9).
+
+\subsection{Seleção das ocorrências das proteínas}
+
+O \emph{script} (step04.php) do quarto componente é responsável por apresentar as ocorrências das proteínas selecionadas, em humanos, conforme projetado no caso de uso da Figura \ref{fgr:CasoDeUso01}.
+
+No \emph{Script} \ref{lst:step04t} as proteínas selecionadas são recebidas (linha 2) e organizadas em uma lista (linha 3). Então é feito um \emph{laço} (linha 4) que pega cada uma das proteínas e busca o arquivo texto no \emph{site} do STRING com as ocorrências da mesma em humanos (linhas 5 a 7) (\emph{species=9606} na linha 7 significa humanos), então é realizado um teste (linha 8) para verificar se o arquivo de retorno é um vetor. Após isso é feito um \emph{laço} (linha 9) que pega cada item e separa o identificador da proteína (linha 14) e a descrição (linha 15), através da expressão regular (linha 10) que foi executada (linhas 11 e 12) e é responsável por separar as informaçoes que serão utilizadas.
+
+\singlespace
+\lstset{language=php}
+\lstinputlisting[caption=step04.php (trecho), label=lst:step04t]{codes/step04-trecho.php}
+\onehalfspace
+
+\subsection{Visualização da rede de interação da(s) proteína(s)}
+
+O \emph{script} (step05.php) do quinto componente é responsável por apresentar a rede de interação da(s) proteína(s) e disponibilizar para \emph{download} seu arquivo XML, conforme projetado no caso de uso da Figura \ref{fgr:CasoDeUso01}.
+
+No \emph{Script} \ref{lst:step05t} os identificadores das proteínas selecionadas na quarta etapa são recebidos e armazenados em uma variável (linha 2), então é realizado um teste para verificar se o usuário selecionou alguma proteína (linha 3), tendo selecionado alguma proteína é feito um teste (linha 4) que verifica se uma única proteína foi selecionada. Se apenas uma proteína tiver sido selecionada (linha 4) o sistema montará o \emph{link}, para a busca do arquivo texto no STRING, que contém o endereço da imagem da rede de interação da proteína (linhas 5 a 7).
+
+\singlespace
+\lstset{language=php}
+\lstinputlisting[caption=step05.php (trecho), label=lst:step05t]{codes/step05-trecho.php}
+\onehalfspace
+
+Havendo mais de uma proteína selecionada (linha 8) será montado o \emph{link} para a busca do arquivo texto no STRING, que contém o endereço da imagem da rede de interação das proteínas (linhas 9 a 19) colocando entre os identificadores das proteínas um caractere especial (linha 12). Então é feito um teste (linha 23) para verificar se o \emph{link} foi montado e em caso afirmativo é feita a busca do arquivo (linha 24). Dentro desse arquivo é tirado o endereço da imagem da rede de interação da(s) proteína(s) (linha 28) e através da expressão regular (linha 25) que foi executada (linhas 26 e 27), é separado o identificador da rede no STRING (linha 29) que permite buscar o arquivo XML, abrir a página dos outros arquivos para \emph{download} e da rede de interação da(s) proteína(s) na página \emph{web} do STRING.
+
+\subsection{Documentação do fluxo de pesquisa da doença}
+
+O \emph{script} (flow.php) do sexto componente é responsável por documentar o fluxo de pesquisa da doença e controlar as alterações nessa documentação.
+
+O \emph{Script} \ref{lst:flowt} inicia com a inicialização de uma sessão (linha 2), então é realizado um teste para verificar se a sessão \emph{fluxo} já está registrada (linha 3), se não estiver então a sessão é registrada (linha 4), caso esteja a variável \emph{fluxo} (do tipo vetor) recebe o conteúdo da sessão com o mesmo nome (linha 6).
+
+No primeiro teste a variável \emph{textoUser} (responsável por capturar a entrada de dados do usuário no fluxo) recebe o conteúdo de uma requisição identificada com o mesmo nome (linha 7), após isso é realizado um teste para verificar se a variável contém alguma informação (linha 8), caso contenha, esse valor é acrescentado ao final do vetor (linha 9). No segundo teste a variável \emph{textoSoft} (responsável por capturar a entrada de dados do sistema no fluxo) recebe o conteúdo de uma requisição identificada com o mesmo nome (linha 10), após isso é realizado um teste para verificar se a variável contém alguma informação (linha 11), caso contenha, esse valor é acrescentado ao final do vetor (linha 12).
+
+No terceiro teste a variável \emph{flowXML} (responsável por captura a entrada de dados do usuário de um arquivo XML de com um fluxo) recebe o conteúdo de uma requisição identificada com o mesmo nome (linha 13), após é realizado um teste para verificar se a variável contém alguma informação (linha 14), caso contenha, são colocadas em variáveis todas as informações do arquivo (linhas 15 a 18), após são realizados outros teste para verificar se tamanho do arquivo é maior que zero, se o nome do arquivo contém algum texto e se o arquivo é do tipo XML (linhas 19 e 20), em caso afirmativo para todos os testes, o arquivo é renomeado e movido para junto dos \emph{scripts} do sistema (linhas 21 e 22). Após isso é realizado mais um teste para verificar se o arquivo existe onde deveria estar (linha 23), caso exista o arquivo XML é aberto e carregado na variável \emph{xml} (linhas 24 a 27) e então é feito um \emph{laço} para ler todos os nodos do arquivo e colocar os textos no vetor (linhas 28 e 29).
+
+\singlespace
+\lstset{language=php}
+\lstinputlisting[caption=flow.php (trecho), label=lst:flowt]{codes/flow-trecho.php}
+\onehalfspace
+
+No quarto teste a variável \emph{removeItem} (responsável por captura a indicação de uma remoção feita pelo usuário) recebe o conteúdo de uma requisição identificada com o mesmo nome (linha 33), após é realizado um teste para verificar se a variável contém um número válido do vetor (linha 34), caso contenha, é verificado se o vetor contém mais de um item (linha 35), se tiver, o item indicado pelo usuário é removido (linhas 36 e 37), caso não tenha, o vetor é todo apagado (linha 40).
+
+No quinto teste a variável \emph{limpaFluxo} (responsável por captura a indicação da remoção de todos os itens feita pelo usuário) recebe o conteúdo de uma requisição identificada com o mesmo nome (linha 42), após é realizado um teste para verificar se a variável contém a confirmação da remoção (linha 43), em caso afirmativo, todo o conteúdo do vetor é removido. Por fim, o vetor é gravado na variável de sessão com o mesmo nome (linha 45). Após o vetor ter sido gravado ele pode ser visualizado com o comando \emph{print\_r(\$fluxo)}.
+
+\subsection{Salvamento do fluxo de pesquisa da doença}
+
+O \emph{script} (createXMLFlow.php) do sétimo componente é responsável por criar e disponibilizar para \emph{download} o arquivo XML que contém o fluxo de pesquisa da(s) doença(s).
+
+O \emph{Script} \ref{lst:createXMLFlowt} inicia da mesma forma que o \emph{Script} \ref{lst:flowt} e das linhas 1 a 6 eles são idênticos, para tanto essas linhas não serão explicadas novamente. Após ter sido carregada ou criada a sessão, na variável \emph{filename} é armazenado o nome que terá o arquivo a ser criado (linha 7), então é criada a variável que contém o arquivo XML (linhas 8 e 9), após é criado o nodo \emph{flow} (linhas 10) e em seguida ele é adicionado ao arquivo (linha 11). Uma vez criado o nodo \emph{flow}, é feito um \emph{laço} (linha 12) para criar um nodo \emph{step} para cada item do vetor contendo o valor desse item (linha 13) e depois adiciona-lo dentro do nodo \emph{flow} (linha 14). Feito isso o arquivo XML é salvo (linha 16).
+
+As linhas 17 a 27 tem a única função de fazer com que o sistema solicite um local para salvamento do arquivo na máquina do usuário.
+
+\subsection{Integração com o software Cytoscape}
+
+A integração do sistema com o software Cytoscape ocorre através do arquivo XML da rede de interação da(s) proteína(s) que é fornecido pelo quinto componente (step05.php) e que deve ser salvo para, posteriormente, ser importado pelo Cytoscape e utilizados os \emph{plug-ins} desejados.
+
+\pagebreak
+
+\singlespace
+\lstset{language=php}
+\lstinputlisting[caption=createXMLFlow.php (trecho), label=lst:createXMLFlowt]{codes/createXMLFlow-trecho.php}
+\onehalfspace
+
+\section{Workflow científico do sistema web}
+
+O \emph{workflow} científico da Figura \ref{fgr:FluxoSoftware} visa demonstrar as etapas que o especialista precisa realizar no sistema \emph{web} para obter a(s) rede(s) de interação da(s) proteína(s).
+
+\begin{figure}[htp]
+	\centering
+	\includegraphics[scale=.75]{imgs/FluxoSoftware}
+	\caption{Fluxo Software}
+	\label{fgr:FluxoSoftware}
+\end{figure}
+
+O processo no sistema se inicia com a pesquisa da doença, como pode ser visto na Figura \ref{fgr:step01}. O usuário digita a doença que deseja encontrar e clica no botão \emph{Search}.
+
+\begin{figure}[htp]
+	\centering
+	\framebox{\includegraphics[width=.9\textwidth]{imgs/step01}}
+	\caption{Procura da doença}
+	\label{fgr:step01}
+\end{figure}
+
+Então o sistema apresenta as ocorrências de doenças com aquele termo, assim como poderia ser feito no site do OMIM, para que o usuário escolha a doença que deseja visualizar e clica sobre seu \emph{link}, como mostra a Figura \ref{fgr:step02}.
+
+\begin{figure}[ht]
+	\centering
+	\framebox{\includegraphics[width=.9\textwidth]{imgs/step02}}
+	\caption{Seleciona a ocorrência da doença}
+	\label{fgr:step02}
+\end{figure}
+
+Após isso, o sistema irá apresentar o relatório da doença escolhida anteriormente (o mesmo apresentado pelo OMIM) e também irá sugerir algumas proteínas encontradas no relatório para que o usuário selecione as que deseja pesquisar, como mostra a Figura \ref{fgr:step03}.
+
+Então o usuário pode apagar as proteínas que não deseja pesquisar da \emph{caixa de texto} e, acrescentar as que deseja pesquisar como o sistema não encontrou ou não estão no relatório da doença, após isso o usuário clica no botão \emph{Next} e o sistema irá pesquisar as ocorrências da(s) proteína(s).
+
+\begin{figure}[ht]
+	\centering
+	\framebox{\includegraphics[width=.9\textwidth]{imgs/step03}}
+	\caption{Apresenta relatório da doença e seleciona proteínas}
+	\label{fgr:step03}
+\end{figure}
+
+Na seqüência, o sistema irá apresentar as ocorrências de cada proteína seleciona (em humanos), como mostra a Figura \ref{fgr:step04}, assim como são apresentadas no \emph{site} do STRING. O usuário então seleciona as que deseja visualizar a rede de interação da(s) proteína(s) e clica no botão \emph{Next} novamente.
+
+\begin{figure}[ht]
+	\centering
+	\framebox{\includegraphics[width=.9\textwidth]{imgs/step04}}
+	\caption{Seleciona as ocorrências das proteínas}
+	\label{fgr:step04}
+\end{figure}
+
+\pagebreak
+
+Por fim, o sistema apresenta a imagem da rede de interação da(s) proteína(s), como pode ser visto na Figura \ref{fgr:step05}, deixa disponível para \emph{download} o arquivo XML clicando no \emph{link} \emph{Download XML}, que pode ser usado no software Cytoscape, possibilita a visualização dos outros arquivos que podem ser usados clicando no \emph{link} \emph{Other files} e clicando sobre a imagem o usuário será direcionado para a página do STRING para poder realizar qualquer alteração necessária.
+
+\begin{figure}[htp]
+	\centering
+	\framebox{\includegraphics[width=.9\textwidth]{imgs/step05}}
+	\caption{Apresenta rede de interação da proteína e fornece arquivo XML}
+	\label{fgr:step05}
+\end{figure}
+
+\pagebreak
+
+Durante a execução do fluxo o usuário poderá observar que todos os passos estão sendo documentados, como mostra a Figura \ref{fgr:flow}. Então o usuário pode fazer outras pesquisas na seqüência, limpar o fluxo clicando no \emph{link} \emph{Clean flow}, salvar o processo clicando com o botão direito do \emph{mouse} no \emph{link Download flow} e escolhendo um local para o arquivo, adicionar ao fim do fluxo um outro executado anteriormente e/ou recuperar um fluxo clicando no botão \emph{Choose...}, localizando o arquivo XML do fluxo e após clicando no botão \emph{Load}, adicionar comentários ao fluxo digitando a mensagem na caixa de texto \emph{User comments} e após clicando no botão \emph{Add} e apagar etapas ou comentários desnecessários no fluxo clicando sobre o \emph{link} \emph{remove} ao lado do mesmo.
+
+\begin{figure}[htp]
+	\centering
+	\framebox{\includegraphics[scale=0.8]{imgs/flow}}
+	\caption{Fluxo de pesquisa}
+	\label{fgr:flow}
+\end{figure}
+
+\pagebreak
+
+\section{Considerações finais}
+
+Nesse capítulo foram apresentados os artefatos e \emph{scripts} desenvolvidos com base no sistema e um manual de funcionamento do sistema.
+
+Durante o desenvolvimento do sistema, houve problemas com o sistema e mudanças na proposta de software, sendo essas explicadas a seguir. Optou-se por salvar os fluxos de pesquisa desenvolvidos pelo especialista em arquivos XML ao invés de em um SGBD (Sistema Gerenciador de Banco de Dados), visando deixar a cargo do especialista a manutenção de suas pesquisas, foram utilizadas formas de acesso diferentes das que haviam sido propostas, sendo usadas às indicadas pelos \emph{sites} do OMIM e  do STRING na maioria das ocasiões, o \emph{workflow} do sistema foi modificado para deixar a escolha de uma ou mais proteínas transparente ao usuário, e existe um problema que não pode ser resolvido com relação à busca de proteínas não existentes no STRING. Também podemos mencionar que houve dificuldades com relação à hospedagem do sistema, sendo o atendimento e solicitações demorados.
+
+No próximo capítulo serão apresentados os estudos de caso realizados com profissionais da área da biologia e da informática e suas opiniões com relação ao sistema.
