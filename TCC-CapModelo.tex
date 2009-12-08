@@ -1,0 +1,97 @@
+% CAPÍTULO MODELO
+\chapter{Primeiro capítulo}
+\label{chp:PrimeiroCapitulo}
+
+Texto qualquer\ldots
+
+Um exemplo de citação \cite{Furaste:2007}.
+
+Um exemplo de formatação usando \textbf{negrito} e \emph{itálico}.
+
+Um exemplo de nota de rodapé, por exemplo, GPL\footnote{General Public License}.
+
+Criando uma lista de itens:
+
+\begin{itemize}
+	\item Item 1;
+	\item Item 2;
+	\item Item 3.
+\end{itemize}
+
+Criando uma lista de itens numerados:
+
+\begin{enumerate}
+	\item Primeiro item;
+	\item Segundo item;
+	\item Terceiro item.
+\end{enumerate}
+
+\chapter{Segundo capítulo}
+
+Texto qualquer\ldots
+
+\section{Primeira seção}
+
+Texto qualquer\ldots
+
+Inserindo uma imagem.
+
+\begin{figure}[htp]
+	\centering
+	%\includegraphics[width=.9\textwidth]{imgs/BrasaoCaxias}
+	\includegraphics[scale=0.5]{imgs/BrasaoCaxias}
+	\caption{Brasão de Caxias do Sul}
+	Fonte: \cite{Furaste:2007}
+	\label{fgr:BrasaoCaxias}
+\end{figure}
+
+\chapter{Terceiro capítulo}
+
+Texto qualquer\ldots
+
+Inserindo uma tabela.
+
+\begin{table}[ht]
+	\centering
+	\begin{tabular}{c|c}
+	\hline
+	Caracter & Seqüência de Escape\\
+	\hline\hline
+	\&  & \&amp;\\
+	$<$ & \&lt;\\
+	$>$ & \&gt;\\
+	"   & \&quot;\\
+	'   & \&\#39;\\
+	\hline
+	\end{tabular}
+	\caption{Caracteres Especiais no XML}
+	Fonte: \cite{Furaste:2007}
+	\label{tbl:CaracteresEspeciais}
+\end{table}
+
+\section{Segunda seção}
+
+Texto qualquer\ldots
+
+\subsection{Primeira subseção}
+
+Texto qualquer\ldots
+
+Exemplo de referência para capítulo \ref{chp:PrimeiroCapitulo}.
+
+Exemplo de referência para imagem \ref{fgr:BrasaoCaxias}.
+
+Exemplo de referência para tabela \ref{tbl:CaracteresEspeciais}.
+
+Exemplo de referência para código fonte \ref{lst:Basico}.
+
+\chapter{Quarto capítulo}
+
+Texto qualquer\ldots
+
+Inserindo código fonte.
+
+\singlespace % Seta espaçamento simples para o código
+\lstset{language=c++} % Linguagem do código
+\lstinputlisting[caption=Programa Básico em C++, label=lst:Basico]{codes/Basico.cpp}
+\onehalfspace % Seta espaçamento 1,5 novamente
